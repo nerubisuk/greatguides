@@ -1,0 +1,161 @@
+@import 'styles/helpers/colors';
+
+.wrapper { 
+  height: 67px;
+  padding: 0 15px;
+  box-shadow: none;
+  border-bottom: 1px solid $very-light-grey;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 10px;
+  align-items: center;
+  
+  .icon_search, .icon_burger {
+    width: 16px;
+    height: 16px;
+    fill: var(--basic-grey);
+  }
+
+  @media (min-width: 767px) {
+    padding: 0 40px;
+    grid-template-columns: auto 1fr auto auto;
+
+    .icon-search {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.logo {
+  display: grid;
+  height: inherit;
+  align-items: center;
+
+  a {
+    display: block;
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  img {
+    transition: transform .14s ease-out;
+    width: 60px;
+    height: 40px;
+  }
+}
+
+.nav {
+  font-weight: 600;
+  font-size: 14px;
+  justify-self: end;
+
+  a {
+    color: var(--light-grey);
+    padding: 0 10px;
+    line-height: 67px;
+    display: inline-block;
+  }
+}
+
+.right_column {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 15px;
+  justify-items: end;
+
+  @media (min-width: 767px) {
+   height: inherit;
+   align-items: center; 
+   padding-right: 12px;
+   border-right: 1px solid var(--very-light-grey);
+  }
+}
+
+.profile {
+  display: grid;
+  align-items: center;
+  position: relative;
+
+  & > div {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: -15px;
+    margin-left: 15px;
+  }
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.buttons {
+  padding-left: 14px;
+  align-items: center;
+
+  button {
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-weight: 600;
+    font-size: 14px;
+
+    &:first-child {
+      border: 1px solid $very-light-grey;
+      color: $light-grey;
+    }
+
+    &:last-child {
+      color: $basic-grey;
+      background-color: $transparent-grey;
+      border: 1px solid $transparent-grey;
+    } 
+  }
+
+  span {
+    padding: 0 12px;
+    font-size: 12px;
+    color: $light-grey;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  right: -25px;
+  top: 50px;
+  width: 160px;
+  background-color: $flat-white;
+  border: 1px solid $transparent-white;
+  border-radius: 6px;
+  box-shadow: 0 16px 36px 0 rgba(0,  0, 0, .06);
+
+  li {
+    transition: background-color .14s ease-out;
+
+    &:hover {
+      background-color: $transparent-orange;
+
+      a, button {
+        color: $basic-orange;
+      }
+    }
+  }
+
+  a, button {
+    text-align: left;
+    padding-left: 20px;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: $lighter-grey;
+    transition: color .14s ease-out;
+  }
+}
