@@ -1,0 +1,88 @@
+@import 'styles/helpers/colors';
+
+.wrapper {
+  height: 127px;
+  background-color: $flat-white;
+}
+
+.row {
+  padding: 24px 15px;
+  display: grid;
+  max-width: 1110px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 20px;
+  grid-template-areas: 
+      "logo social"
+      "copy copy";
+
+  @media (min-width: 767px) {
+    width: 90%;
+    margin: auto;
+    grid-template-areas: "logo social copy";
+  }
+}
+
+.logo {
+  grid-area: logo;
+  display: grid;
+  align-items: center;
+
+  img {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+.social {
+  grid-area: social;
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  grid-template-columns: repeat(3, auto);
+  max-width: 160px;
+
+  a {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-color: $transparent-grey;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.copyright {
+  grid-area: copy;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $light-grey;
+
+  a {
+    color: $light-grey;
+    text-decoration: underline;
+  }
+
+  @media (min-width: 767px) {
+    display: grid;
+    align-items: center;
+  }
+}
+
+.facebook {
+  height: 16px;
+  width: 15px;
+  fill: $facebook;
+}
+
+.twitter {
+  height: 16px;
+  width: 16px;
+  fill: $twitter;
+}
+
+.instagram {
+  width: 18px;
+  height: 18px;
+}
