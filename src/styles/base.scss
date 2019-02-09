@@ -1,0 +1,14 @@
+@import 'helpers/reset';
+@import 'helpers/transitions';
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
+
+body {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+  font-family: 'Source Sans Pro', sans-serif;
+}
