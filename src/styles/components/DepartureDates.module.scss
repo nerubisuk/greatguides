@@ -1,0 +1,90 @@
+@import 'styles/helpers/colors';
+
+.wrapper {
+  display: block;
+  border-bottom: 1px solid $very-light-grey;
+  padding: 30px 0;
+  max-width: 730px;
+
+  header {
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: $basic-grey;
+  }
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  justify-content: center;
+
+  button {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $transparent-grey;
+  }
+
+  svg {
+    fill: $light-grey;
+    width: 5px;
+    height: 12px;
+  }
+}
+
+.slider {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.date {
+  position: relative;
+  border: 1px solid $very-light-grey;
+  border-radius: 6px;
+  width: 81px;
+  height: 73px;
+  display: inline-block;
+  margin-right: 7px;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+
+  p {
+    position: absolute;
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    margin: auto;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $basic-grey;
+    font-weight: 600;
+
+    span:first-child {
+      font-size: 14px;
+      font-weight: 600;
+      color: $basic-grey;
+      padding-left: 5px;
+    }
+
+    span:last-child {
+      text-transform: none;
+      display: block;
+      font-size: 13px;
+      color: $light-grey;
+      margin-top: 7px;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+  }
+}
