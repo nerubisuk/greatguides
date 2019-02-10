@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from 'components/Icon';
+import PropTypes from 'prop-types';
 import styles from 'styles/components/AdventureCard.module.scss';
 
 const AdventureCard = ({ adventure }) =>
@@ -14,14 +15,14 @@ const AdventureCard = ({ adventure }) =>
         </div>
         <p>{adventure.guide}</p>
         <div className={styles.info}>
-          <Icon name="star" />
+          <Icon name='star' />
           <span>{adventure.ratings.substring(0, 3)}</span>
           <span>&bull;</span>
           <span>{adventure.reviews} reviews</span>
         </div>
       </div>
 
-      <img src={adventure.thumbnail} alt="thumbnail" />
+      <img src={adventure.thumbnail} alt='thumbnail' />
     </div>
 
     <div className={styles.description}>
@@ -34,5 +35,8 @@ const AdventureCard = ({ adventure }) =>
     </div>
   </div>;
 
+// AdventureCard.propTypes = {
+//   adventure: PropTypes.object.isRequired
+// };
 
 export default AdventureCard;
