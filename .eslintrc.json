@@ -22,7 +22,7 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "no-unused-vars": "warn",
+    "no-unused-vars": "error",
     "no-console": "off",
     "jsx-quotes": ["error", "prefer-single"],
     "react/prop-types": 2
