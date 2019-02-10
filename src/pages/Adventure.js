@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import PhotoSlider from 'components/PhotoSlider';
+import AdventureCard from 'components/AdventureCard';
 import styles from 'styles/pages/Adventure.module.scss';
 import adventures from 'mocks/adventures.json';
 
@@ -36,6 +37,16 @@ const Adventure = () =>
 
     {/* PhotoSlider */}
     <PhotoSlider photos={adventure.photos} />
+
+    {/* Similar adventures */}
+    <div className={styles.similar}>
+      <h2>Similar Adventures</h2>
+      <section>
+        {adventure.similar.map((item, index) => 
+          <AdventureCard key={index} adventure={item} />
+        )}
+      </section>
+    </div>
   </div>;
 
 export default Adventure;
