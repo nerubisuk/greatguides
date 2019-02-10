@@ -11,7 +11,7 @@ const AdventureCard = ({ adventure }) =>
 
       <div className={styles.guide}>
         <div className={styles.face}>
-          <img src={adventure.avatar} alt="avatar" />
+          <img src={adventure.avatar} alt='avatar' />
         </div>
         <p>{adventure.guide}</p>
         <div className={styles.info}>
@@ -35,8 +35,8 @@ const AdventureCard = ({ adventure }) =>
     </div>
   </div>;
 
-// AdventureCard.propTypes = {
-//   adventure: PropTypes.func.isRequired
-// };
+AdventureCard.propTypes = {
+  adventure: PropTypes.func.isRequired
+};
 
 export default AdventureCard;

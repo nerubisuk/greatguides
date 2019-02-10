@@ -44,7 +44,6 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn lint",
       "eslint --fix",
       "prettier --write",
       "git add"
