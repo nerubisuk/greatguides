@@ -38,8 +38,13 @@
   display: grid;
   align-items: center;
   justify-items: end;
+  justify-self: end;
   grid-template-columns: repeat(3, auto);
   max-width: 160px;
+
+  @media (min-width: 767px) {
+    justify-self: center;
+  }
 
   a {
     width: 40px;
