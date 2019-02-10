@@ -48,7 +48,7 @@
 
   @media (min-width: 767px) {
     width: 90%;
-    padding: 40px 15px;
+    padding: 40px 0;
     margin: 0 auto;
     max-width: 1110px;
     display: grid;
@@ -123,9 +123,24 @@
   }
 }
 
+.row {
+  padding: 0 15px;
+
+  @media (min-width: 767px) {
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1110px;
+  }
+}
+
 .similar {
   padding: 40px 15px;
   background-color: $transparent-grey;
+
+  @media (min-width: 767px) {
+    padding: 40px 0;
+  }
 
   h2 {
     font-size: 30px;
