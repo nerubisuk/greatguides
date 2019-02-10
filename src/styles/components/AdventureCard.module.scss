@@ -1,0 +1,133 @@
+@import 'styles/helpers/colors';
+
+.wrapper {
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  position: relative;
+
+  @media (min-width: 767px) {
+    margin: 0;
+  }
+}
+
+.thumb {
+  height: 280px;
+  overflow: hidden;
+  color: $flat-white;
+  position: relative;
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.price {
+  background-color: rgba($accident-grey, 0.38);
+  padding: 9px 10px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.like {
+  background-color: rgba($accident-grey, 0.38);
+  padding: 9px 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 6px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: $flat-white;
+  }
+}
+
+.guide {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+    "face name"
+    "face info";
+  grid-column-gap: 10px;
+
+  p {
+    grid-area: name;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  svg {
+    fill: $flat-white;
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.info {
+  grid-area: info;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 5px;
+}
+
+.face {
+  grid-area: face;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.description {
+  background-color: $flat-white;
+  padding: 15px;
+  min-height: 125px;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 7px;
+  }
+}
+
+.type {
+  text-transform: uppercase;
+  color: $basic-orange;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.location {
+  color: $basic-grey;
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 7px;
+
+  svg {
+    width: 14px;
+    height: 16px;
+  }
+}
