@@ -3,6 +3,10 @@
 .wrapper {
   height: 127px;
   background-color: $flat-white;
+  
+  @media (min-width: 767px) {
+    height: 88px;
+  }
 }
 
 .row {
@@ -42,6 +46,7 @@
   justify-self: end;
   grid-template-columns: repeat(3, auto);
   max-width: 160px;
+  grid-column-gap: 10px;
 
   @media (min-width: 767px) {
     justify-self: center;
