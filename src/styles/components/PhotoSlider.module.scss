@@ -1,0 +1,80 @@
+@import 'styles/helpers/colors';
+
+.wrapper {
+  width: 100%;
+  height: 375px;
+  overflow: hidden;
+  position: relative;
+
+  @media (min-width: 767px) { 
+    height: 500px;
+  }
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.controls {
+  position: absolute;
+  padding: 0 15px;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, auto);
+
+  button {
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.info {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 10px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.count {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  font-size: 14px;
+  font-weight: 600;
+  color: $basic-grey;
+
+  svg {
+    margin-right: 7px;
+  }
+}
+
+.like {
+  cursor: pointer;
+}
+
+.count, .like {
+  border-radius: 6px;
+  padding: 10px 18px;
+  background-color: $flat-white;
+}
