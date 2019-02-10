@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from 'components/Icon';
 import PhotoSlider from 'components/PhotoSlider';
 import AdventureCard from 'components/AdventureCard';
+import DepartureDates from 'components/DepartureDates';
 import styles from 'styles/pages/Adventure.module.scss';
 import adventures from 'mocks/adventures.json';
 
@@ -37,6 +38,11 @@ const Adventure = () =>
 
     {/* PhotoSlider */}
     <PhotoSlider photos={adventure.photos} />
+
+    {/* Departure dates */}
+    <div className={styles.row}>
+      <DepartureDates dates={adventure.dates} />
+    </div>
 
     {/* Similar adventures */}
     <div className={styles.similar}>
