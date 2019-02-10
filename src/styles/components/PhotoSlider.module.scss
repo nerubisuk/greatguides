@@ -47,8 +47,16 @@
   left: 15px;
   bottom: 15px;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, max-content);
   grid-column-gap: 10px;
+
+  @media (min-width: 767px) {
+    width: 90%;
+    max-width: 1110px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 
   svg {
     width: 18px;
