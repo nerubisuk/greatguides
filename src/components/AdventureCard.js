@@ -36,7 +36,7 @@ const AdventureCard = ({ adventure }) =>
   </div>;
 
 AdventureCard.propTypes = {
-  adventure: PropTypes.func.isRequired
+  adventure: PropTypes.object.isRequired
 };
 
 export default AdventureCard;
