@@ -28,12 +28,12 @@ class DepartureDates extends React.Component {
           </div>
         )}
       </div>
-    </div>
+    </div>;
   }
 }
 
 DepartureDates.propTypes = {
   dates: PropTypes.array.isRequired
-}
+};
 
 export default DepartureDates;
