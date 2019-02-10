@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import styles from 'styles/components/PhotoSlider.module.scss';
+import PropTypes from 'prop-types';
 
 class PhotoSlider extends React.Component {
   state = {
@@ -17,7 +18,7 @@ class PhotoSlider extends React.Component {
 
     this.setState({
       current
-    })
+    });
   }
 
 
@@ -31,7 +32,7 @@ class PhotoSlider extends React.Component {
 
     this.setState({
       current
-    })
+    });
   }
 
   render() {
@@ -40,23 +41,27 @@ class PhotoSlider extends React.Component {
 
     return <div className={styles.wrapper}>
       <div className={styles.controls}>
-        <button onClick={this.handleClickPrev}><Icon name="arrow-left" /></button>
-        <button onClick={this.handleClickNext}><Icon name="arrow-right" /></button>
+        <button onClick={this.handleClickPrev}><Icon name='arrow-left' /></button>
+        <button onClick={this.handleClickNext}><Icon name='arrow-right' /></button>
       </div>
 
       <div className={styles.info}>
         <div className={styles.count}>
-          <Icon name="image" />
+          <Icon name='image' />
           {photos.length} Photos
         </div>
         <div className={styles.like}>
-          <Icon name="heart" />
+          <Icon name='heart' />
         </div>
       </div>
 
-      <img src={photos[current]} alt="adventure" />
-    </div>
+      <img src={photos[current]} alt='adventure' />
+    </div>;
   }
 }
+
+PhotoSlider.propTypes = {
+  photos: PropTypes.array.isRequired
+};
 
 export default PhotoSlider;
