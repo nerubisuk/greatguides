@@ -5,6 +5,11 @@
     "title": "Trek to Ade Medhanealem village",
     "location": "Lalibella, Ethiopia",
     "price": "1259",
-    "ratings": "4.9/5"
+    "ratings": "4.9/5",
+    "photos": [
+      "https://source.unsplash.com/1600x900/?nature",
+      "https://source.unsplash.com/1600x900/?mountains",
+      "https://source.unsplash.com/1600x900/?rocks"
+    ]
   }
 ]
