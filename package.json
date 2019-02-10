@@ -44,13 +44,13 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint . --fix",
-      "prettier . --write",
+      "eslint --fix",
+      "prettier --write",
       "git add"
     ],
     "*.scss": [
-      "stylelint . --fix",
-      "prettier . --write",
+      "stylelint --fix",
+      "prettier --write",
       "git add"
     ]
   }
