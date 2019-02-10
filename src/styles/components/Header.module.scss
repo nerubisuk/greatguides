@@ -55,10 +55,31 @@
   justify-self: end;
 
   a {
+    position: relative;
     color: $light-grey;
     padding: 0 10px;
     line-height: 67px;
     display: inline-block;
+
+    &:after {
+      content: "";
+      width: calc(100% - 20px);
+      bottom: 1px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      height: 2px;
+      background-color: $light-grey;
+      opacity: 0;
+      transition: opacity .2s ease-out;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -107,6 +128,7 @@
     padding: 8px 15px;
     font-weight: 600;
     font-size: 14px;
+    transition: color .12s ease-out;
 
     &:first-child {
       border: 1px solid $very-light-grey;
@@ -118,6 +140,10 @@
       background-color: $transparent-grey;
       border: 1px solid $transparent-grey;
     } 
+
+    &:hover {
+      color: $basic-orange;
+    }
   }
 
   span {
