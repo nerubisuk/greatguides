@@ -45,8 +45,8 @@ const Footer = () =>
       </div>
 
       <div className={styles.copyright}>
-        Copyright © 2018 GreatGuides Corp. All rights reserved. 
-        &nbsp;<Link to='/'>Privacy policy</Link>
+        Copyright © 2018 GreatGuides Corp. All&nbsp;rights&nbsp;reserved.&nbsp;
+        <Link to='/'>Privacy&nbsp;policy</Link>
       </div>
     </div>
   </footer>;
