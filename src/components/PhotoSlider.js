@@ -1,7 +1,7 @@
-import React from "react";
-import Icon from "components/Icon";
-import styles from "styles/components/PhotoSlider.module.scss";
-import PropTypes from "prop-types";
+import React from 'react';
+import Icon from 'components/Icon';
+import styles from 'styles/components/PhotoSlider.module.scss';
+import PropTypes from 'prop-types';
 
 class PhotoSlider extends React.Component {
   state = {

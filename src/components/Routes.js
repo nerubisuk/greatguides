@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Callback from "components/Callback";
-import auth from "utils/auth";
-import MainLayout from "layouts/Main";
-import PropTypes from "prop-types";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Callback from 'components/Callback';
+import auth from 'utils/auth';
+import MainLayout from 'layouts/Main';
+import PropTypes from 'prop-types';
 
 const handleAuthentication = props => {
   if (/access_token|id_token|error/.test(props.location.hash)) {

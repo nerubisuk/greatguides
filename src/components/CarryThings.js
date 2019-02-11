@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "styles/components/CarryThings.module.scss";
-import Icon from "components/Icon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from 'styles/components/CarryThings.module.scss';
+import Icon from 'components/Icon';
 
 class CarryThings extends React.Component {
   state = {

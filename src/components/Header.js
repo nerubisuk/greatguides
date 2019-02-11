@@ -9,53 +9,53 @@
  * Replace PNG to SVG
  * Add PropTypes
  */
-import React from "react";
-import { Link } from "react-router-dom";
-import Transition from "react-addons-css-transition-group";
-import Icon from "components/Icon";
-import PropTypes from "prop-types";
-import styles from "styles/components/Header.module.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Transition from 'react-addons-css-transition-group';
+import Icon from 'components/Icon';
+import PropTypes from 'prop-types';
+import styles from 'styles/components/Header.module.scss';
 
 /* Constants definition */
 const navItems = [
   {
-    title: "Guides",
-    link: "/",
+    title: 'Guides',
+    link: '/',
   },
   {
-    title: "Adventures",
-    link: "/",
+    title: 'Adventures',
+    link: '/',
   },
   {
-    title: "Become a guide",
-    link: "/",
+    title: 'Become a guide',
+    link: '/',
   },
   {
-    title: "Stories",
-    link: "/",
+    title: 'Stories',
+    link: '/',
   },
 ];
 
 const dropItems = [
   {
-    title: "Profile",
-    link: "/",
+    title: 'Profile',
+    link: '/',
   },
   {
-    title: "Account Details",
-    link: "/",
+    title: 'Account Details',
+    link: '/',
   },
   {
-    title: "My Adventures",
-    link: "/",
+    title: 'My Adventures',
+    link: '/',
   },
   {
-    title: "Customer Trips",
-    link: "/",
+    title: 'Customer Trips',
+    link: '/',
   },
   {
-    title: "My Messages",
-    link: "/",
+    title: 'My Messages',
+    link: '/',
   },
 ];
 
@@ -66,11 +66,11 @@ class Header extends React.Component {
   };
 
   componentDidMount() {
-    document.addEventListener("mousedown", this.handleClickOutside);
+    document.addEventListener('mousedown', this.handleClickOutside);
   }
 
   componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClickOutside);
+    document.removeEventListener('mousedown', this.handleClickOutside);
   }
 
   handleLogin = () => {
@@ -116,7 +116,7 @@ class Header extends React.Component {
           </Link>
         </div>
 
-        {mql !== "mobile" && (
+        {mql !== 'mobile' && (
           <nav className={styles.nav}>
             {navItems.map((item, index) => (
               <Link key={index} to={item.link}>
@@ -128,10 +128,10 @@ class Header extends React.Component {
 
         <div className={styles.right_column}>
           <Icon name='search' className={styles.icon_search} />
-          {mql !== "desktop" && <Icon name='burger' className={styles.icon_burger} />}
+          {mql !== 'desktop' && <Icon name='burger' className={styles.icon_burger} />}
         </div>
 
-        {mql !== "mobile" && (
+        {mql !== 'mobile' && (
           <>
             {auth.isAuthenticated() ? (
               <div className={styles.profile} onClick={this.handleToggleDropDown}>

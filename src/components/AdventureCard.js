@@ -1,7 +1,7 @@
-import React from "react";
-import Icon from "components/Icon";
-import PropTypes from "prop-types";
-import styles from "styles/components/AdventureCard.module.scss";
+import React from 'react';
+import Icon from 'components/Icon';
+import PropTypes from 'prop-types';
+import styles from 'styles/components/AdventureCard.module.scss';
 
 const AdventureCard = ({ adventure }) => (
   <div className={styles.wrapper}>
