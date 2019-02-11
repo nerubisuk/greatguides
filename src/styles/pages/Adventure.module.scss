@@ -1,7 +1,13 @@
-@import 'styles/helpers/colors';
+@import "styles/helpers/colors";
 
 .wrapper {
   display: block;
+
+  h3 {
+    color: $basic-grey;
+    font-size: 20px;
+    padding: 0 0 20px;
+  }
 }
 
 .header {
@@ -13,8 +19,8 @@
       display: grid;
       grid-column-gap: 10px;
       grid-template-areas:
-        'divider divider'
-        'price ratings';
+        "divider divider"
+        "price ratings";
       grid-template-columns: auto 1fr;
 
       @media (min-width: 767px) {
@@ -131,6 +137,44 @@
     max-width: 1110px;
     padding: 0;
     width: 90%;
+  }
+}
+
+.col_1_2 {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.included_excluded {
+  border-bottom: 1px solid #e6e6e6;
+  color: $basic-grey;
+  font-size: 16px;
+  max-width: 730px;
+  padding: 30px 0;
+
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+
+  .icon_plus {
+    fill: $basic-orange;
+  }
+
+  .icon_minus {
+    fill: $light-grey;
+  }
+
+  ul {
+    li {
+      align-items: center;
+      display: grid;
+      grid-column-gap: 10px;
+      grid-template-columns: auto 1fr;
+      margin-bottom: 20px;
+    }
   }
 }
 
