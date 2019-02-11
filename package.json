@@ -46,6 +46,9 @@
     }
   },
   "lint-staged": {
-    "*.{js, scss}": ["yarn lint"]
+    "*.{js, scss}": [
+      "eslint --fix", 
+      "stylelint '**/*.scss' --fix"
+    ]
   }
 }
