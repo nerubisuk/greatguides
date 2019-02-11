@@ -1,5 +1,5 @@
-import auth0 from 'auth0-js';
-import config from 'config/auth0';
+import auth0 from 'auth0-js'
+import config from 'config/auth0'
 
 class Auth {
   accessToken
