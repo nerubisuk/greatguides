@@ -47,7 +47,7 @@
     align-items: center;
     display: grid;
     grid-column-gap: 10px;
-    grid-template-areas: 
+    grid-template-areas:
       'a b'
       'a c';
     grid-template-columns: auto 1fr;
@@ -59,7 +59,7 @@
       height: 24px;
       width: 24px;
     }
-  
+
     p {
       color: $basic-grey;
       font-size: 12px;

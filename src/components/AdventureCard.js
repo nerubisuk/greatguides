@@ -3,11 +3,13 @@ import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 import styles from 'styles/components/AdventureCard.module.scss';
 
-const AdventureCard = ({ adventure }) =>
+const AdventureCard = ({ adventure }) => (
   <div className={styles.wrapper}>
     <div className={styles.thumb}>
       <div className={styles.price}>${adventure.price}</div>
-      <div className={styles.like}><Icon name='heart' /></div>
+      <div className={styles.like}>
+        <Icon name='heart' />
+      </div>
 
       <div className={styles.guide}>
         <div className={styles.face}>
@@ -33,10 +35,11 @@ const AdventureCard = ({ adventure }) =>
         {adventure.location}
       </div>
     </div>
-  </div>;
+  </div>
+);
 
 AdventureCard.propTypes = {
-  adventure: PropTypes.object.isRequired
+  adventure: PropTypes.object.isRequired,
 };
 
 export default AdventureCard;

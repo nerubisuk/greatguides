@@ -9,11 +9,12 @@ import Footer from 'components/Footer';
 import Adventure from 'pages/Adventure';
 
 /* Component definition */
-const Main = ({ ...props }) =>
+const Main = ({ ...props }) => (
   <>
     <Header {...props} />
     <Adventure />
     <Footer />
-  </>;
+  </>
+);
 
 export default Main;

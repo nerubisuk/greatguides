@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 
 class PhotoSlider extends React.Component {
   state = {
-    current: 0
-  } 
+    current: 0,
+  }
 
   handleClickNext = () => {
     let current = this.state.current + 1,
@@ -17,10 +17,9 @@ class PhotoSlider extends React.Component {
     }
 
     this.setState({
-      current
+      current,
     });
   }
-
 
   handleClickPrev = () => {
     let current = this.state.current - 1,
@@ -31,7 +30,7 @@ class PhotoSlider extends React.Component {
     }
 
     this.setState({
-      current
+      current,
     });
   }
 
@@ -39,29 +38,35 @@ class PhotoSlider extends React.Component {
     const { current } = this.state,
       { photos } = this.props;
 
-    return <div className={styles.wrapper}>
-      <div className={styles.controls}>
-        <button onClick={this.handleClickPrev}><Icon name='arrow-left' /></button>
-        <button onClick={this.handleClickNext}><Icon name='arrow-right' /></button>
-      </div>
-
-      <div className={styles.info}>
-        <div className={styles.count}>
-          <Icon name='image' />
-          {photos.length} Photos
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles.controls}>
+          <button onClick={this.handleClickPrev}>
+            <Icon name='arrow-left' />
+          </button>
+          <button onClick={this.handleClickNext}>
+            <Icon name='arrow-right' />
+          </button>
         </div>
-        <div className={styles.like}>
-          <Icon name='heart' />
-        </div>
-      </div>
 
-      <img src={photos[current]} alt='adventure' />
-    </div>;
+        <div className={styles.info}>
+          <div className={styles.count}>
+            <Icon name='image' />
+            {photos.length} Photos
+          </div>
+          <div className={styles.like}>
+            <Icon name='heart' />
+          </div>
+        </div>
+
+        <img src={photos[current]} alt='adventure' />
+      </div>
+    );
   }
 }
 
 PhotoSlider.propTypes = {
-  photos: PropTypes.array.isRequired
+  photos: PropTypes.array.isRequired,
 };
 
 export default PhotoSlider;

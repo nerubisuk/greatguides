@@ -11,10 +11,8 @@ import adventures from 'mocks/adventures.json';
 const adventure = adventures[0],
   ratings = [1, 1, 1, 1, 1];
 
-
-const Adventure = () =>   
+const Adventure = () => (
   <div className={styles.wrapper}>
-    
     {/* Header */}
     <div className={styles.header}>
       <section>
@@ -32,7 +30,9 @@ const Adventure = () =>
           <span>tour price</span>
         </div>
         <div className={styles.ratings}>
-          {ratings.map((item, index) => <Icon key={index} name='star' />)}
+          {ratings.map((item, index) => (
+            <Icon key={index} name='star' />
+          ))}
           <span>{adventure.ratings}</span>
         </div>
       </section>
@@ -56,11 +56,12 @@ const Adventure = () =>
     <div className={styles.similar}>
       <h2>Similar Adventures</h2>
       <section>
-        {adventure.similar.map((item, index) => 
+        {adventure.similar.map((item, index) => (
           <AdventureCard key={index} adventure={item} />
-        )}
+        ))}
       </section>
     </div>
-  </div>;
+  </div>
+);
 
 export default Adventure;

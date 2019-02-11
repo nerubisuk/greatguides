@@ -3,7 +3,7 @@
 .wrapper {
   background-color: $flat-white;
   height: 127px;
-  
+
   @media (min-width: 767px) {
     height: 88px;
   }
@@ -12,7 +12,7 @@
 .row {
   display: grid;
   grid-row-gap: 20px;
-  grid-template-areas: 
+  grid-template-areas:
     'logo social'
     'copy copy';
   grid-template-columns: repeat(2, 1fr);

@@ -2,20 +2,20 @@
   .fadeIn-appear {
     opacity: 0.01;
   }
-  
+
   .fadeIn-appear.fadeIn-appear-active {
     animation-duration: 0.3s;
     animation-fill-mode: both;
     animation-name: slideInRight;
     opacity: 1;
   }
-  
+
   @keyframes slideInRight {
     from {
       transform: translate3d(0, -100%, 0);
       visibility: visible;
     }
-  
+
     to {
       transform: translate3d(0, 0, 0);
     }
