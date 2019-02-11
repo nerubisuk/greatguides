@@ -1,7 +1,6 @@
 {
   linters: {
     "{,!(node_modules)/**/}*.{js,jsx}": ["prettier --write", "eslint --fix", "git add"],
-    "*.{css,scss}": ["prettier --write", "stylelint", "git add"],
-    "*.{json,md}": ["prettier --write", "git add"]
+    "*.{css,scss}": ["prettier --write", "stylelint --fix", "git add"]
   }
 }
