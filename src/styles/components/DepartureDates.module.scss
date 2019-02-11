@@ -1,6 +1,4 @@
-@import 'styles/helpers/colors';
-
-.wrapper {
+@import 'styles/helpers/colors' .wrapper {
   border-bottom: 1px solid $very-light-grey;
   display: block;
   max-width: 730px;
@@ -67,7 +65,7 @@
     position: absolute;
     right: 0;
     text-transform: uppercase;
-    
+
     top: 0;
 
     span:first-child {
