@@ -1,5 +1,5 @@
 # Ignore everything:
-*
+/*
 
-# Except myapp folder:
-!src/
+# Except myapp:
+!/src
