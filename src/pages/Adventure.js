@@ -3,6 +3,8 @@ import Icon from 'components/Icon';
 import PhotoSlider from 'components/PhotoSlider';
 import AdventureCard from 'components/AdventureCard';
 import DepartureDates from 'components/DepartureDates';
+import TourDescription from 'components/TourDescription';
+import CarryThings from 'components/CarryThings';
 import styles from 'styles/pages/Adventure.module.scss';
 import adventures from 'mocks/adventures.json';
 
@@ -42,6 +44,12 @@ const Adventure = () =>
     {/* Departure dates */}
     <div className={styles.row}>
       <DepartureDates dates={adventure.dates} />
+
+      {/* Tour description */}
+      <TourDescription description={adventure.description} />
+
+      {/* Carry */}
+      <CarryThings carry={adventure.carry} />
     </div>
 
     {/* Similar adventures */}
