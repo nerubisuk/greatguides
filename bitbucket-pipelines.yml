@@ -14,4 +14,4 @@ pipelines:
           - npm run build
           
           # Deploys to AWS S3 bucket 
-          - aws s3 sync --delete dist/ s3://greatguides-dev
+          - aws s3 sync --delete build/ s3://greatguides-dev
