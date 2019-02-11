@@ -1,8 +1,5 @@
 {
   linters: {
-    "*.{js,jsx}": ["prettier --write", "eslint --fix", "git add"],
-    "*.{css,scss}": ["prettier --write", "stylelint", "git add"],
-    "*.{json,md}": ["prettier --write", "git add"]
+    "*.{js,json,md,scss,css}": ["eslint --fix", prettier --write", "stylelint", "git add"],
   },
-  ignore: ["**/CHANGELOG.md"]
 }
