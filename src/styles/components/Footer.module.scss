@@ -1,4 +1,4 @@
-@import 'styles/helpers/colors';
+@import "styles/helpers/colors";
 
 .wrapper {
   background-color: $flat-white;
@@ -13,14 +13,14 @@
   display: grid;
   grid-row-gap: 20px;
   grid-template-areas:
-    'logo social'
-    'copy copy';
+    "logo social"
+    "copy copy";
   grid-template-columns: repeat(2, 1fr);
   max-width: 1110px;
   padding: 24px 15px;
 
   @media (min-width: 767px) {
-    grid-template-areas: 'logo social copy';
+    grid-template-areas: "logo social copy";
     margin: auto;
     padding: 24px 0;
     width: 90%;

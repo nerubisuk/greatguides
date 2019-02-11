@@ -1,4 +1,4 @@
-@import 'styles/helpers/colors';
+@import "styles/helpers/colors";
 
 .wrapper {
   display: block;
@@ -57,8 +57,8 @@
   display: grid;
   grid-column-gap: 10px;
   grid-template-areas:
-    'face name'
-    'face info';
+    "face name"
+    "face info";
   grid-template-columns: auto 1fr;
   left: 15px;
   position: absolute;

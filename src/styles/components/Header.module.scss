@@ -1,4 +1,4 @@
-@import 'styles/helpers/colors';
+@import "styles/helpers/colors";
 
 .wrapper {
   align-items: center;
@@ -65,7 +65,7 @@
     &::after {
       background-color: $light-grey;
       bottom: 1px;
-      content: '';
+      content: "";
       height: 2px;
       left: 0;
       margin: auto;

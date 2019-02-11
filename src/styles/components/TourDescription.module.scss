@@ -1,4 +1,4 @@
-@import 'styles/helpers/colors';
+@import "styles/helpers/colors";
 
 .wrapper {
   border-bottom: 1px solid #e6e6e6;
@@ -48,8 +48,8 @@
     display: grid;
     grid-column-gap: 10px;
     grid-template-areas:
-      'a b'
-      'a c';
+      "a b"
+      "a c";
     grid-template-columns: auto 1fr;
     padding: 30px 0;
 
