@@ -1,11 +1,8 @@
 {
-  "*.js": [
-    "eslint --fix",
-    "prettier --write"
-  ],
-
-  "*.scss": [
-    "stylelint '**/*.scss' --fix",
-    "prettier --write"
-  ]
+  linters: {
+    "*.{js,jsx}": ["prettier --write", "eslint --fix", "git add"],
+    "*.{css,scss}": ["prettier --write", "stylelint --fix", "git add"],
+    "*.{json,md}": ["prettier --write", "git add"]
+  },
+  ignore: ["**/CHANGELOG.md"]
 }
