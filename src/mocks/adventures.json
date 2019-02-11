@@ -98,6 +98,7 @@
     ],
 
     "included": ["Qualified guide", "Transfering", "Equipment", "Dinner"],
+    "excluded": ["Pants", "Stuff", "Alchohol", "One more"],
 
     "similar": [
       {
