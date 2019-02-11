@@ -9,7 +9,7 @@
   grid-template-columns: 1fr auto;
   height: 67px;
   padding: 0 15px;
-  
+
   .icon_search,
   .icon_burger {
     fill: $basic-grey;
@@ -103,7 +103,7 @@
   display: grid;
   position: relative;
 
-  & > div {
+  div {
     border-radius: 50%;
     height: 40px;
     margin-left: 15px;
@@ -140,7 +140,7 @@
       background-color: $transparent-grey;
       border: 1px solid $transparent-grey;
       color: $basic-grey;
-    } 
+    }
 
     &:hover {
       color: $basic-orange;
