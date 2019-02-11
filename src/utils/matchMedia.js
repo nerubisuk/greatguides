@@ -5,7 +5,7 @@
  */
 
 export default () => {
-  if (window.matchMedia("(max-width: 766px)").matches) {
-    return "mobile";
-  } else return "desktop";
+  if (window.matchMedia('(max-width: 766px)').matches) {
+    return 'mobile';
+  } else return 'desktop';
 };
