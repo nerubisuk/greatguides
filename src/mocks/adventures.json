@@ -97,6 +97,8 @@
       "Water Bottle 1 Lt"
     ],
 
+    "included": ["Qualified guide", "Transfering", "Equipment", "Dinner"],
+
     "similar": [
       {
         "guide": "Adhraaa Al Azimi",
