@@ -6,11 +6,11 @@ import Icon from 'components/Icon';
 class CarryThings extends React.Component {
   state = {
     maxItems: 6,
-  }
+  };
 
   sliceCarry = (carry, end) => {
     return carry.slice(0, end);
-  }
+  };
 
   handleExtend = () => {
     const maxItems = this.props.carry.length;
@@ -18,11 +18,11 @@ class CarryThings extends React.Component {
     this.setState({
       maxItems,
     });
-  }
+  };
 
   isExtended = () => {
     return this.state.maxItems === this.props.carry.length;
-  }
+  };
 
   render() {
     const { carry } = this.props,

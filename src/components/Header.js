@@ -63,7 +63,7 @@ const dropItems = [
 class Header extends React.Component {
   state = {
     isDropDown: false,
-  }
+  };
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside);
@@ -75,31 +75,31 @@ class Header extends React.Component {
 
   handleLogin = () => {
     this.props.auth.login();
-  }
+  };
 
   handleSignup = () => {
     this.props.auth.signup();
-  }
+  };
 
   handleLogout = () => {
     this.props.auth.logout(this.props.history);
-  }
+  };
 
   handleToggleDropDown = () => {
     this.setState({
       isDropDown: !this.state.isDropDown,
     });
-  }
+  };
 
   setDropDownRef = node => {
     this.dropDownRef = node;
-  }
+  };
 
   handleClickOutside = event => {
     if (this.dropDownRef && !this.dropDownRef.contains(event.target)) {
       this.handleToggleDropDown();
     }
-  }
+  };
 
   render() {
     const { mql, auth } = this.props,

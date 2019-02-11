@@ -2,10 +2,10 @@ import auth0 from 'auth0-js';
 import config from 'config/auth0';
 
 class Auth {
-  accessToken
-  idToken
-  expiresAt
-  user = {}
+  accessToken;
+  idToken;
+  expiresAt;
+  user = {};
 
   auth0 = new auth0.WebAuth({
     domain: config.AUTH_CONFIG.domain,
@@ -14,7 +14,7 @@ class Auth {
     audience: `https://${config.AUTH_CONFIG.domain}/userinfo`,
     responseType: 'token id_token',
     scope: 'openid email offline_access picture profile',
-  })
+  });
 
   constructor() {
     this.login = this.login.bind(this);

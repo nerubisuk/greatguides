@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 class PhotoSlider extends React.Component {
   state = {
     current: 0,
-  }
+  };
 
   handleClickNext = () => {
     let current = this.state.current + 1,
@@ -19,7 +19,7 @@ class PhotoSlider extends React.Component {
     this.setState({
       current,
     });
-  }
+  };
 
   handleClickPrev = () => {
     let current = this.state.current - 1,
@@ -32,7 +32,7 @@ class PhotoSlider extends React.Component {
     this.setState({
       current,
     });
-  }
+  };
 
   render() {
     const { current } = this.state,

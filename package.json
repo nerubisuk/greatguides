@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/*.{js,scss}' --fix && stylelint 'src/*.{scss}' --fix && prettier 'src/*.{js, scss}' --write"
+    "lint": "eslint 'src/**/*.js' --fix && stylelint 'src/**/*.scss' --fix && prettier 'src/**/*.{js, scss}' --write"
   },
   "eslintConfig": {
     "extends": "react-app"

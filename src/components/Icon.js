@@ -6,7 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line
-import '-!svg-sprite-loader!../assets/icons.svg'
+import '-!svg-sprite-loader!../assets/icons.svg';
 
 /* Component definition */
 const Icon = ({ className, name }) => (

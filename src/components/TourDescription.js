@@ -19,13 +19,13 @@ const renderSpecs = specs =>
 class TourDescription extends React.Component {
   state = {
     isExtended: false,
-  }
+  };
 
   handleExtendDescription = () => {
     this.setState({
       isExtended: true,
     });
-  }
+  };
 
   render() {
     const { description } = this.props,
