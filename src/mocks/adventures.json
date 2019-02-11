@@ -63,6 +63,25 @@
       }
     ],
 
+    "description": {
+      "preface": "We are GreatGuides.com, an adventure travel site for the adventure seeker to meet and journey with inspirational guides. We believe in making adventure travel a personal connection between the adventurer and their guide.\nOur mission is to make the adventure travel experience transparent and accessible to everyone. We help guides launch sustainable and independent ventures with no upfront costs. Our goal is to build an adventure marketplace that benefits the guide, the local community and provides the adventurer a unique experience.\nThank you.",
+      "specs": {
+        "duration": "8 days",
+        "distance": "54 km.",
+        "elevation": "2000 m.",
+        "difficulty": "Medium",
+        "pickup": "Included",
+        "minimum_age": "16 years",
+        "season": "Nov-May"
+      }
+    },
+
+    "carry": [
+      "Poncho", "Rain Coat or Umbrella", "Backpack (Min 55 Ltrs)", "Floaters or Sandals", "Trekking Shoes", "2 Pairs of Quick Dry Tees",
+      "Track Pants", "3 Pair of Socks", "2 pairs of woolen socks", "2 Full Sleeve Sweater", "or Fleece Jacket", "Down feather Jacket",
+      "Sun Cap", "One Scarf", "Light towel", "Lip Balm Cold Cream", "Sun Screen (SPF 40+)", "Water Bottle 1 Lt"
+    ],
+
     "similar": [
       {
         "guide": "Adhraaa Al Azimi",
