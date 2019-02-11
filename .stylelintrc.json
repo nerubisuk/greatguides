@@ -8,7 +8,7 @@
       ]
     }],
     "block-no-empty": null,
-    "unit-whitelist": ["px", "%", "s"]
+    "unit-whitelist": ["px", "%", "s", "fr"]
   },
   "plugins": [
     "stylelint-scss"
