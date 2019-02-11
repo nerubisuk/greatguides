@@ -1,5 +1,5 @@
-import auth0 from 'auth0-js';
-import config from 'config/auth0';
+import auth0 from "auth0-js";
+import config from "config/auth0";
 
 class Auth {
   accessToken;
@@ -12,8 +12,8 @@ class Auth {
     clientID: config.AUTH_CONFIG.clientId,
     redirectUri: config.AUTH_CONFIG.callbackUrl,
     audience: `https://${config.AUTH_CONFIG.domain}/userinfo`,
-    responseType: 'token id_token',
-    scope: 'openid email offline_access picture profile',
+    responseType: "token id_token",
+    scope: "openid email offline_access picture profile",
   });
 
   constructor() {
@@ -31,7 +31,7 @@ class Auth {
 
   signup() {
     this.auth0.authorize({
-      login_hint: 'signUp',
+      login_hint: "signUp",
     });
   }
 
@@ -40,7 +40,7 @@ class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult, history);
       } else if (err) {
-        history.push('/authError');
+        history.push("/authError");
         console.log(err);
       }
     });
@@ -52,7 +52,7 @@ class Auth {
 
   setSession(authResult, history) {
     // Set isLoggedIn flag in localStorage
-    localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem("isLoggedIn", "true");
 
     // Set the time that the access token will expire at
     let expiresAt = authResult.expiresIn * 1000 + new Date().getTime();
@@ -69,7 +69,7 @@ class Auth {
     this.user.picture = picture;
 
     // Navigate to the home route
-    history.push('/');
+    history.push("/");
   }
 
   renewSession(history) {
@@ -92,10 +92,10 @@ class Auth {
     this.user = {};
 
     // Remove isLoggedIn flag from localStorage
-    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem("isLoggedIn");
 
     // Navigate to the home route
-    history.replace('/');
+    history.replace("/");
   }
 
   isAuthenticated() {
