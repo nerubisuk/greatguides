@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from 'styles/components/CarryThings.module.scss'
-import Icon from 'components/Icon'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from 'styles/components/CarryThings.module.scss';
+import Icon from 'components/Icon';
 
 class CarryThings extends React.Component {
   state = {
@@ -9,24 +9,24 @@ class CarryThings extends React.Component {
   }
 
   sliceCarry = (carry, end) => {
-    return carry.slice(0, end)
+    return carry.slice(0, end);
   }
 
   handleExtend = () => {
-    const maxItems = this.props.carry.length
+    const maxItems = this.props.carry.length;
 
     this.setState({
       maxItems,
-    })
+    });
   }
 
   isExtended = () => {
-    return this.state.maxItems === this.props.carry.length
+    return this.state.maxItems === this.props.carry.length;
   }
 
   render() {
     const { carry } = this.props,
-      { maxItems } = this.state
+      { maxItems } = this.state;
 
     return (
       <div className={styles.wrapper}>
@@ -34,19 +34,19 @@ class CarryThings extends React.Component {
         <ul>
           {this.sliceCarry(carry, maxItems).map((item, index) => (
             <li key={index}>
-              <Icon name="tick" />
+              <Icon name='tick' />
               {item}
             </li>
           ))}
         </ul>
         {!this.isExtended() && <button onClick={this.handleExtend}>Read more</button>}
       </div>
-    )
+    );
   }
 }
 
 CarryThings.propTypes = {
   carry: PropTypes.array.isRequired,
-}
+};
 
-export default CarryThings
+export default CarryThings;
