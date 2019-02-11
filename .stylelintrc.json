@@ -2,7 +2,7 @@
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
     "scss/at-extend-no-missing-placeholder": true,
-    "selector-class-pattern": "_",
+    "selector-class-pattern": "foo_[a-z]+",
     "at-rule-no-unknown": [
       true,
       {
