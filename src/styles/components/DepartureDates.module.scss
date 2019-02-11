@@ -1,41 +1,41 @@
 @import 'styles/helpers/colors';
 
 .wrapper {
-  display: block;
   border-bottom: 1px solid $very-light-grey;
-  padding: 30px 0;
+  display: block;
   max-width: 730px;
+  padding: 30px 0;
 
   header {
-    padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr auto;
+    padding-bottom: 20px;
   }
 
   h3 {
-    font-size: 20px;
     color: $basic-grey;
+    font-size: 20px;
   }
 }
 
 .controls {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
 
   button {
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    overflow: hidden;
     background-color: $transparent-grey;
+    border-radius: 50%;
+    height: 27px;
+    overflow: hidden;
+    width: 27px;
   }
 
   svg {
     fill: $light-grey;
-    width: 5px;
     height: 12px;
+    width: 5px;
   }
 }
 
@@ -45,46 +45,46 @@
 }
 
 .date {
-  position: relative;
+  align-items: center;
   border: 1px solid $very-light-grey;
   border-radius: 6px;
-  width: 81px;
-  height: 73px;
   display: inline-block;
-  margin-right: 7px;
-  align-items: center;
-  text-align: center;
+  height: 73px;
   justify-items: center;
+  margin-right: 7px;
+  position: relative;
+  text-align: center;
+  width: 81px;
 
   p {
+    bottom: 0;
+    color: $basic-grey;
+    font-size: 13px;
+    font-weight: 600;
+    height: 50%;
+    left: 0;
+    margin: auto;
     position: absolute;
+    right: 0;
+    text-transform: uppercase;
     
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    margin: auto;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: $basic-grey;
-    font-weight: 600;
 
     span:first-child {
+      color: $basic-grey;
       font-size: 14px;
       font-weight: 600;
-      color: $basic-grey;
       padding-left: 5px;
     }
 
     span:last-child {
-      text-transform: none;
+      color: $light-grey;
       display: block;
       font-size: 13px;
-      color: $light-grey;
-      margin-top: 7px;
       font-weight: 400;
       letter-spacing: 0.2px;
+      margin-top: 7px;
+      text-transform: none;
     }
   }
 }

@@ -11,100 +11,100 @@
 }
 
 .thumb {
-  height: 280px;
-  overflow: hidden;
-  color: $flat-white;
-  position: relative;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  color: $flat-white;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
 
   img {
-    width: 100%;
     min-height: 100%;
     object-fit: cover;
     object-position: center;
+    width: 100%;
   }
 }
 
 .price {
   background-color: rgba($accident-grey, 0.38);
-  padding: 9px 10px;
-  position: absolute;
-  top: 15px;
-  left: 15px;
   border-radius: 6px;
   font-size: 18px;
   font-weight: 600;
+  left: 15px;
+  padding: 9px 10px;
+  position: absolute;
+  top: 15px;
 }
 
 .like {
   background-color: rgba($accident-grey, 0.38);
+  border-radius: 6px;
   padding: 9px 10px;
   position: absolute;
-  top: 15px;
   right: 15px;
-  border-radius: 6px;
+  top: 15px;
 
   svg {
-    width: 18px;
-    height: 18px;
     fill: $flat-white;
+    height: 18px;
+    width: 18px;
   }
 }
 
 .guide {
-  position: absolute;
   bottom: 15px;
-  left: 15px;
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-areas: 
-    "face name"
-    "face info";
   grid-column-gap: 10px;
+  grid-template-areas: 
+    'face name'
+    'face info';
+  grid-template-columns: auto 1fr;
+  left: 15px;
+  position: absolute;
 
   p {
-    grid-area: name;
-    font-weight: 600;
     font-size: 14px;
+    font-weight: 600;
+    grid-area: name;
   }
 
   svg {
     fill: $flat-white;
-    width: 8px;
     height: 8px;
+    width: 8px;
   }
 }
 
 .info {
-  grid-area: info;
-  display: grid;
   align-items: center;
-  grid-template-columns: repeat(4, auto);
+  display: grid;
+  grid-area: info;
   grid-column-gap: 5px;
+  grid-template-columns: repeat(4, auto);
 }
 
 .face {
+  border-radius: 50%;
   grid-area: face;
-  width: 36px;
   height: 36px;
   overflow: hidden;
-  border-radius: 50%;
+  width: 36px;
 
   img {
-    width: 100%;
     min-height: 100%;
     object-fit: cover;
     object-position: center;
+    width: 100%;
   }
 }
 
 .description {
   background-color: $flat-white;
-  padding: 15px;
-  min-height: 125px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  min-height: 125px;
+  padding: 15px;
 
   p {
     font-size: 18px;
@@ -115,22 +115,22 @@
 }
 
 .type {
-  text-transform: uppercase;
   color: $basic-orange;
-  font-weight: 600;
   font-size: 12px;
+  font-weight: 600;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .location {
-  color: $basic-grey;
   align-items: center;
+  color: $basic-grey;
   display: grid;
-  grid-template-columns: auto 1fr;
   grid-column-gap: 7px;
+  grid-template-columns: auto 1fr;
 
   svg {
-    width: 14px;
     height: 16px;
+    width: 14px;
   }
 }

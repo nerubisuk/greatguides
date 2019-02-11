@@ -1,8 +1,8 @@
 @import 'styles/helpers/colors';
 
 .wrapper {
-  height: 127px;
   background-color: $flat-white;
+  height: 127px;
   
   @media (min-width: 767px) {
     height: 88px;
@@ -10,65 +10,65 @@
 }
 
 .row {
-  padding: 24px 15px;
   display: grid;
-  max-width: 1110px;
-  grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 20px;
   grid-template-areas: 
-      "logo social"
-      "copy copy";
+    'logo social'
+    'copy copy';
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1110px;
+  padding: 24px 15px;
 
   @media (min-width: 767px) {
-    width: 90%;
-    padding: 24px 0;
+    grid-template-areas: 'logo social copy';
     margin: auto;
-    grid-template-areas: "logo social copy";
+    padding: 24px 0;
+    width: 90%;
   }
 }
 
 .logo {
-  grid-area: logo;
-  display: grid;
   align-items: center;
+  display: grid;
+  grid-area: logo;
 
   img {
-    width: 60px;
     height: 40px;
+    width: 60px;
   }
 }
 
 .social {
-  grid-area: social;
-  display: grid;
   align-items: center;
+  display: grid;
+  grid-area: social;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(3, auto);
   justify-items: end;
   justify-self: end;
-  grid-template-columns: repeat(3, auto);
   max-width: 160px;
-  grid-column-gap: 10px;
 
   @media (min-width: 767px) {
     justify-self: center;
   }
 
   a {
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
+    align-items: center;
     background-color: $transparent-grey;
     border-radius: 50%;
     display: grid;
-    align-items: center;
+    height: 40px;
     justify-content: center;
+    overflow: hidden;
+    width: 40px;
   }
 }
 
 .copyright {
-  grid-area: copy;
-  font-size: 12px;
-  line-height: 1.5;
   color: $light-grey;
+  font-size: 12px;
+  grid-area: copy;
+  line-height: 1.5;
 
   a {
     color: $light-grey;
@@ -76,24 +76,24 @@
   }
 
   @media (min-width: 767px) {
-    display: grid;
     align-items: center;
+    display: grid;
   }
 }
 
 .facebook {
+  fill: $facebook;
   height: 16px;
   width: 15px;
-  fill: $facebook;
 }
 
 .twitter {
+  fill: $twitter;
   height: 16px;
   width: 16px;
-  fill: $twitter;
 }
 
 .instagram {
-  width: 18px;
   height: 18px;
+  width: 18px;
 }

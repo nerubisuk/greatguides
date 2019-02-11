@@ -1,0 +1,42 @@
+@import 'styles/helpers/colors';
+
+.wrapper {
+  border-bottom: 1px solid #e6e6e6;
+  color: $basic-grey;
+  font-size: 16px;
+  max-width: 730px;
+  padding: 30px 0;
+
+  svg {
+    fill: $basic-orange;
+    height: 12px;
+    width: 16px;
+  }
+
+  h3 {
+    color: $basic-grey;
+    font-size: 20px;
+    padding: 0 0 30px;
+  }
+
+  ul {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    padding-bottom: 20px;
+
+    li {
+      align-items: center;
+      display: grid;
+      grid-column-gap: 10px;
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  button {
+    border-bottom: 1px solid rgba($basic-orange, 0.5);
+    color: $basic-orange;
+    padding: 0;
+  }
+}

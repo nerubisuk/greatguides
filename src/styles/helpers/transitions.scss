@@ -4,10 +4,10 @@
   }
   
   .fadeIn-appear.fadeIn-appear-active {
-    opacity: 1;
-    animation-name: slideInRight;
-    animation-duration: .3s;
+    animation-duration: 0.3s;
     animation-fill-mode: both;
+    animation-name: slideInRight;
+    opacity: 1;
   }
   
   @keyframes slideInRight {

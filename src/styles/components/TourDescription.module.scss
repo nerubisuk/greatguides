@@ -1,0 +1,77 @@
+@import 'styles/helpers/colors';
+
+.wrapper {
+  border-bottom: 1px solid #e6e6e6;
+  max-width: 730px;
+  padding: 30px 0;
+
+  h3 {
+    color: $basic-grey;
+    font-size: 20px;
+    padding: 0 0 20px;
+  }
+
+  p {
+    color: $light-grey;
+    line-height: 1.8;
+    max-height: 185px;
+    overflow: hidden;
+
+    br {
+      line-height: 2.5;
+    }
+  }
+
+  .extended {
+    max-height: none;
+  }
+
+  button {
+    border-bottom: 1px solid rgba($basic-orange, 0.5);
+    color: $basic-orange;
+    padding: 0;
+  }
+}
+
+.specs {
+  display: grid;
+  grid-column-gap: 60px;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: 320px) {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .specs_items {
+    align-items: center;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-areas: 
+      'a b'
+      'a c';
+    grid-template-columns: auto 1fr;
+    padding: 30px 0;
+
+    svg {
+      fill: $basic-orange;
+      grid-area: a;
+      height: 24px;
+      width: 24px;
+    }
+  
+    p {
+      color: $basic-grey;
+      font-size: 12px;
+      font-weight: 666;
+      grid-area: b;
+      letter-spacing: 0.2px;
+    }
+
+    span {
+      color: $light-grey;
+      font-size: 14px;
+      grid-area: c;
+    }
+  }
+}
