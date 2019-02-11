@@ -1,1 +1,4 @@
+/dist
+/build
+/node_modules
 /src/styles/helpers/reset.scss

@@ -1,5 +1,10 @@
-# Ignore everything:
-/*
+/node_modules
+/.pnp
+.pnp.js
 
-# Except myapp:
-!/src
+# testing
+/coverage
+
+# production
+/build
+/dist
