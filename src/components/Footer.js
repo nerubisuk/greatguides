@@ -3,24 +3,24 @@
  * @since 0.1.0
  * @author Anton Komarenko <mi3ta@sent.as>
  */
-import React from 'react';
-import Icon from 'components/Icon';
-import styles from 'styles/components/Footer.module.scss';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Icon from "components/Icon";
+import styles from "styles/components/Footer.module.scss";
+import { Link } from "react-router-dom";
 
 /* Constants definition */
 const socialLinks = [
   {
-    link: 'http://facebook.com',
-    icon: 'facebook',
+    link: "http://facebook.com",
+    icon: "facebook",
   },
   {
-    link: 'http://twitter.com',
-    icon: 'twitter',
+    link: "http://twitter.com",
+    icon: "twitter",
   },
   {
-    link: 'http://instagram.com',
-    icon: 'instagram',
+    link: "http://instagram.com",
+    icon: "instagram",
   },
 ];
 

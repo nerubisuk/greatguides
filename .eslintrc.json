@@ -4,10 +4,7 @@
     "es6": true,
     "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,7 +17,7 @@
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "no-unused-vars": "error",
     "no-console": "off",
@@ -34,13 +31,10 @@
       "version": "detect"
     },
     "propWrapperFunctions": [
-        "forbidExtraProps",
-        {"property": "freeze", "object": "Object"},
-        {"property": "myFavoriteWrapper"}
+      "forbidExtraProps",
+      { "property": "freeze", "object": "Object" },
+      { "property": "myFavoriteWrapper" }
     ],
-    "linkComponents": [
-      "Hyperlink",
-      {"name": "Link", "linkAttribute": "to"}
-    ]
+    "linkComponents": ["Hyperlink", { "name": "Link", "linkAttribute": "to" }]
   }
 }

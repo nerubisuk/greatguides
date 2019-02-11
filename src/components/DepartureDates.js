@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Icon from 'components/Icon';
-import styles from 'styles/components/DepartureDates.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import Icon from "components/Icon";
+import styles from "styles/components/DepartureDates.module.scss";
 
 class DepartureDates extends React.Component {
   render() {
