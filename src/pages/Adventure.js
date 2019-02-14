@@ -5,6 +5,7 @@ import AdventureCard from 'components/AdventureCard';
 import DepartureDates from 'components/DepartureDates';
 import TourDescription from 'components/TourDescription';
 import CarryThings from 'components/CarryThings';
+import BookRequest from 'components/BookRequest';
 import styles from 'styles/pages/Adventure.module.scss';
 import adventures from 'mocks/adventures.json';
 
@@ -43,40 +44,46 @@ const Adventure = () => (
 
     {/* Departure dates */}
     <div className={styles.row}>
-      <DepartureDates dates={adventure.dates} />
+      <div className={styles.column}>
+        <DepartureDates dates={adventure.dates} />
 
-      {/* Tour description */}
-      <TourDescription description={adventure.description} />
+        {/* Tour description */}
+        <TourDescription description={adventure.description} />
 
-      {/* Carry */}
-      <CarryThings carry={adventure.carry} />
+        {/* Carry */}
+        <CarryThings carry={adventure.carry} />
 
-      <div className={styles.col_1_2}>
-        {/* Included */}
-        <div className={styles.included_excluded}>
-          <h3>Included</h3>
-          <ul>
-            {adventure.included.map((item, index) => (
-              <li key={index}>
-                <Icon name='plus' className={styles.icon_plus} />
-                {item}
-              </li>
-            ))}
-          </ul>
+        <div className={styles.col_1_2}>
+          {/* Included */}
+          <div className={styles.included_excluded}>
+            <h3>Included</h3>
+            <ul>
+              {adventure.included.map((item, index) => (
+                <li key={index}>
+                  <Icon name='plus' className={styles.icon_plus} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Excluded */}
+          <div className={styles.included_excluded}>
+            <h3>Excluded</h3>
+            <ul>
+              {adventure.excluded.map((item, index) => (
+                <li key={index}>
+                  <Icon name='minus' className={styles.icon_minus} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </div>
 
-        {/* Excluded */}
-        <div className={styles.included_excluded}>
-          <h3>Excluded</h3>
-          <ul>
-            {adventure.excluded.map((item, index) => (
-              <li key={index}>
-                <Icon name='minus' className={styles.icon_minus} />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className={styles.column}>
+        <BookRequest guide={adventure.guide} />
       </div>
     </div>
 
