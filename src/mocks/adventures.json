@@ -1,8 +1,14 @@
 [
   {
     "id": "0",
-    "guide": "Andrew Hernandez",
-    "avatar": "https://randomuser.me/api/portraits/men/57.jpg",
+    "guide": {
+      "name": "Andrew Hernandez",
+      "avatar": "https://randomuser.me/api/portraits/men/57.jpg",
+      "location": "N'Djaména, Chad",
+      "rating": "4.9",
+      "reviews": "225",
+      "adventures": "4"
+    },
     "type": "Hiking adventure",
     "title": "Trek to Ade Medhanealem village",
     "location": "Lalibella, Ethiopia",
