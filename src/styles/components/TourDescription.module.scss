@@ -51,6 +51,18 @@
       "a c";
     grid-template-columns: auto 1fr;
     padding: 30px 0;
+    position: relative;
+
+    &::before {
+      background-color: $transparent-grey;
+      border-radius: 50%;
+      content: "";
+      height: 36px;
+      margin-left: -10px;
+      position: absolute;
+      width: 36px;
+      z-index: -1;
+    }
 
     svg {
       fill: $basic-orange;
