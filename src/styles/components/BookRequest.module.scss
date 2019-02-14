@@ -1,0 +1,111 @@
+@import "styles/helpers/colors";
+
+.wrapper {
+  background-color: $flat-white;
+  border: 1px solid $transparent-white;
+  border-radius: 6px;
+  box-shadow: 0 16px 36px 0 rgba($flat-black, 0.06);
+  margin-top: -105px;
+  position: absolute;
+  width: 100%;
+
+  header {
+    border-bottom: 1px solid $very-light-grey;
+    display: grid;
+    grid-column-gap: 12px;
+    grid-template-columns: auto 1fr;
+    padding: 20px;
+
+    svg {
+      fill: $lighter-grey;
+      height: 8px;
+      width: 8px;
+    }
+
+    span {
+      color: $basic-orange;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1px;
+      line-height: 17px;
+    }
+
+    h4 {
+      color: $basic-grey;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 23px;
+    }
+
+    p {
+      color: $lighter-grey;
+      font-size: 14px;
+      letter-spacing: 0.1px;
+      line-height: 18px;
+    }
+  }
+
+  .avatar {
+    border-radius: 50%;
+    height: 60px;
+    overflow: hidden;
+    width: 60px;
+
+    img {
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  .guide {
+    display: grid;
+    grid-row-gap: 3px;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .content {
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-rows: repeat(3, auto);
+    padding: 20px;
+
+    .input {
+      border: 1px solid $very-light-grey;
+      border-radius: 6px;
+      color: $basic-grey;
+      display: grid;
+      font-size: 15px;
+      grid-column-gap: 15px;
+      grid-template-columns: auto 1fr auto;
+      letter-spacing: 0.3px;
+      line-height: 19px;
+      padding: 14px 16px;
+    }
+
+    .arrow_down {
+      width: 13px;
+    }
+
+    svg {
+      fill: $basic-grey;
+      height: 16px;
+      stroke: $basic-grey;
+      width: 16px;
+    }
+
+    button {
+      background-color: $basic-orange;
+      border-radius: 6px;
+      color: $flat-white;
+      font-family: "Source Sans Pro";
+      font-size: 15px;
+      font-weight: 600;
+      height: 50px;
+      letter-spacing: 0.3px;
+      line-height: 19px;
+      text-transform: uppercase;
+    }
+  }
+}
