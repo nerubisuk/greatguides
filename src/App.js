@@ -6,6 +6,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Routes from 'components/Routes';
+import { Provider } from 'react-redux';
+import store from 'store';
 import matchMedia from 'utils/matchMedia';
 import auth from 'utils/auth';
 import PropTypes from 'prop-types';
@@ -40,13 +42,12 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      this.state.mql && (
-        <div className='App'>
-          <Routes childProps={{ mql: this.state.mql }} />
-        </div>
-      )
-    );
+    return <Provider store={store}>
+      {this.state.mql
+        && <div className='App'>
+            <Routes childProps={{ mql: this.state.mql }} />
+          </div>}
+    </Provider>
   }
 }
 
