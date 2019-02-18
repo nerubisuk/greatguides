@@ -23,6 +23,11 @@ class Auth {
     this.handleAuthentication = this.handleAuthentication.bind(this);
     this.isAuthenticated = this.isAuthenticated.bind(this);
     this.renewSession = this.renewSession.bind(this);
+    this.getIdToken = this.getIdToken.bind(this);
+  }
+
+  getIdToken() {
+    return this.idToken;
   }
 
   login() {
