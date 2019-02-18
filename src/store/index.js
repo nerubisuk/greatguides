@@ -6,18 +6,19 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import rootReducer from './reducers';
-import sagas from './sagas';
+/* Imports desired Redux parts */
+import initialState from './state';
+import reducers from './reducers';
+import sagas from './sagas/';
 
-// Inital redux store state
-const initialState = {};
-
-// Enhancers & middlewares
+/* Defindes middlewares */
 const sagaMiddleware = createSagaMiddleware();
 const middlewares = [sagaMiddleware];
 
-const store = createStore(rootReducer, initialState, compose(applyMiddleware(...middlewares)));
+/* Defines global store */
+const store = createStore(reducers, initialState, compose(applyMiddleware(...middlewares)));
 
+/* Runs every saga in the system */
 sagas.forEach(saga => sagaMiddleware.run(saga));
 
 export default store;
