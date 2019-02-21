@@ -13,7 +13,9 @@ const ReadMoreTextBlock = ({ children, bgColor }) => {
   return (
     <div className={[`${styles.wrapper} ${styles[bgColor]}`]}>
       {children.find(item => item.type === 'h3')}
+
       <hr className='short_hr' />
+
       {children.filter(item => item.type === 'p')}
 
       <div className={styles.read_more}>
@@ -28,7 +30,7 @@ const ReadMoreTextBlock = ({ children, bgColor }) => {
 
 /* Prop types definition */
 ReadMoreTextBlock.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.any.isRequired,
   bgColor: PropTypes.string.isRequired,
 };
 
