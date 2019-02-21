@@ -18,15 +18,17 @@ class BookRequest extends React.Component {
       <div className={styles.wrapper}>
         <header>
           <div className={styles.avatar}>
-            <img src={guide.avatar} alt='avatar' />
+            <img src={guide.profilePictureUrl} alt='avatar' />
           </div>
           <div className={styles.guide}>
-            <span>{guide.location}</span>
-            <h4>{guide.name}</h4>
+            <span>
+              {guide.city}, {guide.country}
+            </span>
+            <h4>{guide.fullName}</h4>
             <p>
               <Icon name='star' />
               &nbsp;{guide.rating}
-              &nbsp;&bull;&nbsp;{guide.reviews}&nbsp;reviews &bull;&nbsp;{guide.adventures}
+              &nbsp;&bull;&nbsp;{guide.reviews}&nbsp;reviews &bull;&nbsp;{guide.adventures.length}
               &nbsp;adventures
             </p>
           </div>
@@ -44,7 +46,7 @@ class BookRequest extends React.Component {
           </div>
           <div className={styles.input}>
             <Icon name='messages' />
-            Hi Andrew. I would like to book adventure «Trek to Ade Medhanealem village».
+            Hi {guide.firstName}. I would like to book adventure «Trek to Ade Medhanealem village».
           </div>
           <button>Request to book</button>
         </div>
