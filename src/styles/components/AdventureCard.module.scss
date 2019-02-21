@@ -18,6 +18,16 @@
   overflow: hidden;
   position: relative;
 
+  &::after {
+    background: linear-gradient(to bottom, #fff0 60%, #000000a8 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
   img {
     min-height: 100%;
     object-fit: cover;
@@ -27,7 +37,7 @@
 }
 
 .price {
-  background-color: rgba($accident-grey, 0.38);
+  background-color: rgba($flat-black, 0.12);
   border-radius: 6px;
   font-size: 18px;
   font-weight: 600;
@@ -38,7 +48,7 @@
 }
 
 .like {
-  background-color: rgba($accident-grey, 0.38);
+  background-color: rgba($flat-black, 0.12);
   border-radius: 6px;
   padding: 9px 10px;
   position: absolute;
@@ -62,11 +72,14 @@
   grid-template-columns: auto 1fr;
   left: 15px;
   position: absolute;
+  z-index: 1;
 
   p {
+    color: $flat-white;
     font-size: 14px;
     font-weight: 600;
     grid-area: name;
+    margin-bottom: 0;
   }
 
   svg {
@@ -107,10 +120,11 @@
   padding: 15px;
 
   p {
+    color: $basic-grey;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.4;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
   }
 }
 
@@ -124,13 +138,15 @@
 
 .location {
   align-items: center;
-  color: $basic-grey;
+  color: $light-grey;
   display: grid;
+  font-size: 14px;
   grid-column-gap: 7px;
   grid-template-columns: auto 1fr;
 
   svg {
-    height: 16px;
+    fill: $light-grey;
+    height: 14px;
     width: 14px;
   }
 }
