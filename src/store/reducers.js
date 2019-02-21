@@ -5,7 +5,7 @@
  */
 import { handleActions } from 'redux-actions';
 import initialState from './state';
-import { _LOGGER_ } from 'utils/helpers-common';
+import { _LOGGER } from 'utils/helpers-common';
 
 export default handleActions(
   {
@@ -14,7 +14,7 @@ export default handleActions(
         state.adventures.push(adventure);
       }
 
-      _LOGGER_('ADVENTURE_BY_ID_SUCCEEDED');
+      _LOGGER('ADVENTURE_BY_ID_SUCCEEDED');
 
       return {
         ...state,
