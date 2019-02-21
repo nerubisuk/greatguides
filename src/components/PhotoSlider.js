@@ -59,7 +59,7 @@ class PhotoSlider extends React.Component {
           </div>
         </div>
 
-        <img src={photos[current]} alt='adventure' />
+        <img src={photos[current].imageUrl} alt='adventure' />
       </div>
     );
   }
