@@ -28,7 +28,7 @@ class TourDescription extends React.Component {
   };
 
   render() {
-    const { description } = this.props,
+    const { description, specs } = this.props,
       { isExtended } = this.state;
 
     return (
@@ -36,18 +36,19 @@ class TourDescription extends React.Component {
         <h3>Tour Description</h3>
         <p
           className={isExtended ? styles.extended : ''}
-          dangerouslySetInnerHTML={{ __html: renderFormattedText(description.preface) }}
+          dangerouslySetInnerHTML={{ __html: renderFormattedText(description) }}
         />
         {!isExtended && <button onClick={this.handleExtendDescription}>Read more</button>}
 
-        <div className={styles.specs}>{renderSpecs(description.specs)}</div>
+        {<div className={styles.specs}>{renderSpecs(specs)}</div>}
       </div>
     );
   }
 }
 
 TourDescription.propTypes = {
-  description: PropTypes.object.isRequired,
+  description: PropTypes.string.isRequired,
+  specs: PropTypes.object.isRequired,
 };
 
 export default TourDescription;
