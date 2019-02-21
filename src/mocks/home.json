@@ -1,0 +1,47 @@
+{
+  "popular": {
+    "categories": [
+      "All",
+      "Rafting",
+      "Hiking",
+      "Biking",
+      "Walking"
+    ],
+    
+    "similar": [
+      {
+        "guide": "Adhraaa Al Azimi",
+        "avatar": "https://randomuser.me/api/portraits/men/43.jpg",
+        "type": "Hiking adventure",
+        "title": "The best hiking adventure with good awesome Jackson man",
+        "location": "Ramnagar, Uttarakhand, India",
+        "price": "1250",
+        "ratings": "4.9/5",
+        "reviews": "107",
+        "thumbnail": "https://source.unsplash.com/800x600/?boats"
+      },
+      {
+        "guide": "Emlen Beaver",
+        "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
+        "type": "Hiking adventure",
+        "title": "Trek to Ade Medhanealem village",
+        "location": "Lalibella, Ethiopia",
+        "price": "989",
+        "ratings": "4.9/5",
+        "reviews": "89",
+        "thumbnail": "https://source.unsplash.com/800x600/?trees"
+      },
+      {
+        "guide": "Hu Hyon-Suk",
+        "avatar": "https://randomuser.me/api/portraits/women/23.jpg",
+        "type": "Rafting adventure",
+        "title": "The best rafting adventure with good awesome Jackson man",
+        "location": "Salir, Portugal",
+        "price": "780",
+        "ratings": "4.9/5",
+        "reviews": "78",
+        "thumbnail": "https://source.unsplash.com/800x600/?sea"
+      }
+    ]
+  }
+}
