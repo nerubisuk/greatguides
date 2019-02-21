@@ -6,6 +6,7 @@
 import React from 'react';
 import styles from 'styles/pages/HomePage.module.scss';
 import PopularAdventures from 'containers/PopularAdventures';
+import SubscribeToNewsletter from 'components/SubscribeToNewsletter';
 import data from 'mocks/home.json';
 
 /* Component definition */
@@ -14,6 +15,7 @@ class HomePage extends React.Component {
     return (
       <main className={styles.wrapper}>
         <PopularAdventures adventures={data.popular} />
+        <SubscribeToNewsletter />
       </main>
     );
   }
