@@ -15,8 +15,11 @@ class HomePage extends React.Component {
   render() {
     return (
       <main className={styles.wrapper}>
+        {/* Popular adventures */}
         <PopularAdventures adventures={data.popular} />
-        <ReadMoreTextBlock bgColor='grey'>
+
+        {/* Read more blocks */}
+        <ReadMoreTextBlock bgColor='white'>
           <h3>About us</h3>
           <p>
             We are GreatGuides.com, an adventure travel site for the adventure seeker to meet and
@@ -54,6 +57,8 @@ class HomePage extends React.Component {
           </p>
           <img src='/images/why-we-are-different-mobile-345x294.png' />
         </ReadMoreTextBlock>
+
+        {/* Subscribe to newsletter */}
         <SubscribeToNewsletter />
       </main>
     );
