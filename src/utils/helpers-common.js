@@ -5,6 +5,6 @@
  */
 
 /* Simple logger */
-export const _LOGGER_ = message => {
+export const _LOGGER = message => {
   console.log(`[LOG]: ${message}`);
 };
