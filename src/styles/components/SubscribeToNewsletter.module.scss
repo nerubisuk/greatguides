@@ -1,0 +1,59 @@
+@import "styles/helpers/colors";
+
+.wrapper {
+  background-color: $transparent-grey;
+  padding: 40px 15px;
+  position: relative;
+  text-align: center;
+
+  h3 {
+    font-size: 27px;
+    line-height: 37px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 240px;
+  }
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 230px;
+  }
+
+  form {
+    display: grid;
+    grid-column-gap: 12px;
+    grid-template-columns: 1fr auto;
+  }
+
+  input {
+    background: $flat-white;
+    border: 0;
+    border-radius: 6px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  button {
+    background-color: $basic-orange;
+    border-radius: 6px;
+    color: $flat-white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    max-width: 135px;
+    padding: 0 12px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    svg {
+      fill: $flat-white;
+      height: 12px;
+      margin-left: 10px;
+      width: 18px;
+    }
+  }
+}
