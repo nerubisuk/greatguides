@@ -24,7 +24,7 @@ const PopularAdventures = ({ adventures }) => {
         ))}
       </ul>
 
-      <hr />
+      <hr className='short_hr' />
 
       <p>
         Our guides have a lot of greate adventures in different categories like Rafting, Hiking,
