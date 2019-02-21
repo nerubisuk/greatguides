@@ -12,18 +12,20 @@ import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 import auth from 'utils/auth';
 
-// Get the authentication token from the local storage
+/* Gets the authentication token from the auth0 object */
 const authorization = () => {
   const token = auth.getIdToken();
   return token ? `Bearer ${token}` : '';
 };
 
+/* Creates the httpLink */
 const httpLink = createHttpLink({
   uri: 'https://api-test.services.activelyme.com/graphql',
 });
 
+/* Creates the authLink */
 const authLink = setContext((_, { headers }) => {
-  // Return the headers to the context so httpLink can read them
+  /* Returns the headers to the context so httpLink can read them */
   return {
     headers: {
       ...headers,
@@ -32,6 +34,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+/* Creates the wsLink */
 const wsLink = new WebSocketLink({
   uri: 'wss://us1.prisma.sh/info/activelyme/dev',
   options: {
@@ -42,6 +45,7 @@ const wsLink = new WebSocketLink({
   },
 });
 
+/* Defines the main link for Apollo client */
 const link = split(
   ({ query }) => {
     const { kind, operation } = getMainDefinition(query);
