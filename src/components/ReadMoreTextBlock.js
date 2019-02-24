@@ -9,21 +9,25 @@ import PropTypes from 'prop-types';
 import styles from 'styles/components/ReadMoreTextBlock.module.scss';
 
 /* Component definition */
-const ReadMoreTextBlock = ({ children, bgColor }) => {
+const ReadMoreTextBlock = ({ children, bgColor, isReverseOrder }) => {
   return (
     <div className={[`${styles.wrapper} ${styles[bgColor]}`]}>
-      {children.find(item => item.type === 'h3')}
+      <div className={[`${styles.row} ${isReverseOrder ? styles.revers : ''}`]}>
+        <div className={styles.column}>
+          {children.find(item => item.type === 'h3')}
 
-      <hr className='short_hr' />
+          <hr className='short_hr' />
 
-      {children.filter(item => item.type === 'p')}
+          {children.filter(item => item.type === 'p')}
 
-      <div className={styles.read_more}>
-        <span>See more</span>
-        <Icon name={`read-more${bgColor !== 'grey' ? '-grey' : ''}`} />
+          <div className={styles.read_more}>
+            <span>Read more</span>
+            <Icon name={`read-more${bgColor !== 'grey' ? '-grey' : ''}`} />
+          </div>
+        </div>
+
+        <div className={styles.column}>{children.find(item => item.type === 'img')}</div>
       </div>
-
-      {children.find(item => item.type === 'img')}
     </div>
   );
 };
@@ -32,6 +36,7 @@ const ReadMoreTextBlock = ({ children, bgColor }) => {
 ReadMoreTextBlock.propTypes = {
   children: PropTypes.any.isRequired,
   bgColor: PropTypes.string.isRequired,
+  isReverseOrder: PropTypes.any,
 };
 
 export default ReadMoreTextBlock;
