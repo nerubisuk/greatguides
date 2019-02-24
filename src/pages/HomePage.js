@@ -5,7 +5,9 @@
  */
 import React from 'react';
 import styles from 'styles/pages/HomePage.module.scss';
-import PopularAdventures from 'containers/PopularAdventures';
+import AdventureCard from 'components/AdventureCard';
+import GuideCard from 'components/GuideCard';
+import CardList from 'containers/CardList';
 import SubscribeToNewsletter from 'components/SubscribeToNewsletter';
 import ReadMoreTextBlock from 'components/ReadMoreTextBlock';
 import data from 'mocks/home.json';
@@ -16,7 +18,34 @@ class HomePage extends React.Component {
     return (
       <main className={styles.wrapper}>
         {/* Popular adventures */}
-        <PopularAdventures adventures={data.popular} />
+        <CardList categories={data.popular.categories} bgColor='grey' isMore>
+          <h3>Popular Adventures</h3>
+          <p>
+            Our guides have a lot of greate adventures in different categories like Rafting, Hiking,
+            Biking and Walking.
+          </p>
+
+          {data.popular.similar.map((item, index) => (
+            <AdventureCard key={index} adventure={item} />
+          ))}
+        </CardList>
+
+        {/* Our Guides */}
+        <CardList categories={data.guides.categories} bgColor='white'>
+          <h3>Popular Adventures</h3>
+          <p>
+            We have top guides from around the world. GreatGuides.com is about personal contact.
+          </p>
+
+          {data.guides.items.map((item, index) => (
+            <GuideCard key={index} guide={item} />
+          ))}
+        </CardList>
+
+        {/* Map */}
+        <div className={styles.map}>
+          <img src='/images/map.png' alt='map' />
+        </div>
 
         {/* Read more blocks */}
         <ReadMoreTextBlock bgColor='white'>
@@ -32,7 +61,7 @@ class HomePage extends React.Component {
             costs. Our goal is to build an adventure marketplace that benefits the guide, the local
             community and provides the adventurer a unique experience.
           </p>
-          <img src='https://source.unsplash.com/600x800/?people' />
+          <img alt='about-us' src='https://source.unsplash.com/600x800/?people' />
         </ReadMoreTextBlock>
         <ReadMoreTextBlock bgColor='grey'>
           <h3>How it works?</h3>
@@ -44,7 +73,7 @@ class HomePage extends React.Component {
             wish to charge for their services, leaving GreatGuides.com to take care of admin behind
             the scenes.
           </p>
-          <img src='https://source.unsplash.com/600x800/?nature' />
+          <img alt='how-it-works' src='https://source.unsplash.com/600x800/?nature' />
         </ReadMoreTextBlock>
         <ReadMoreTextBlock bgColor='white'>
           <h3>Why we are different</h3>
@@ -55,7 +84,7 @@ class HomePage extends React.Component {
             Plus, the few independent guides that do have a significant online presence are mostly
             city-based.
           </p>
-          <img src='/images/why-we-are-different-mobile-345x294.png' />
+          <img alt='why-we-are-different' src='/images/why-we-are-different-mobile-345x294.png' />
         </ReadMoreTextBlock>
 
         {/* Subscribe to newsletter */}
