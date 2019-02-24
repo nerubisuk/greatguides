@@ -13,6 +13,7 @@
       {
         "name": "Andrew Hernandez",
         "thumbnail": "https://source.unsplash.com/1600x900/?man,glass",
+        "avatar": "https://randomuser.me/api/portraits/men/43.jpg",
         "location": "N'Djaména, Chad",
         "rating": "4.9",
         "reviews": "225",
@@ -21,6 +22,7 @@
       {
         "name": "Alexis Morgan",
         "thumbnail": "https://source.unsplash.com/1600x900/?man,forest",
+        "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
         "location": "Algarve, Portugal",
         "rating": "4.9",
         "reviews": "87",
@@ -29,6 +31,7 @@
       {
         "name": "Bhupendra Sharma",
         "thumbnail": "https://source.unsplash.com/1600x900/?man,jeep",
+        "avatar": "https://randomuser.me/api/portraits/women/23.jpg",
         "location": "Addis Abeba, Ethiopia",
         "rating": "4.9",
         "reviews": "34",
@@ -37,6 +40,7 @@
       {
         "name": "Adhraaa Al Azimi",
         "thumbnail": "https://source.unsplash.com/1600x900/?man,desert",
+        "avatar": "https://randomuser.me/api/portraits/men/12.jpg",
         "location": "Paris, France",
         "rating": "4.9",
         "reviews": "11",
