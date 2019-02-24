@@ -1,0 +1,71 @@
+@import "styles/helpers/colors";
+
+.wrapper {
+  position: relative;
+
+  .thumb {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: $flat-white;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      background: linear-gradient(to bottom, #fff0 60%, #000000a8 100%);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    img {
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+}
+
+.description {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  min-height: 125px;
+  padding: 15px 0;
+
+  p {
+    color: $basic-grey;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+}
+
+.location {
+  color: $basic-orange;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.info {
+  align-items: center;
+  color: $light-grey;
+  display: grid;
+  font-size: 14px;
+  grid-area: info;
+  grid-column-gap: 5px;
+  grid-template-columns: repeat(6, auto);
+  max-width: 215px;
+
+  svg {
+    fill: $light-grey;
+    height: 8px;
+    width: 8px;
+  }
+}
