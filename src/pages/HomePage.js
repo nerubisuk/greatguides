@@ -63,7 +63,7 @@ class HomePage extends React.Component {
           </p>
           <img alt='about-us' src='https://source.unsplash.com/600x800/?people' />
         </ReadMoreTextBlock>
-        <ReadMoreTextBlock bgColor='grey'>
+        <ReadMoreTextBlock bgColor='grey' isReverseOrder>
           <h3>How it works?</h3>
           <p>
             Guides can set up their profile and are approved based on their level of experience,
@@ -72,6 +72,11 @@ class HomePage extends React.Component {
             they create. They work out the trip schedule they want us to promote and the price they
             wish to charge for their services, leaving GreatGuides.com to take care of admin behind
             the scenes.
+          </p>
+          <p>
+            Meanwhile, travellers get to access reviews and trip histories as well as check what
+            skills a guide brings to the table. Via the site, the traveller and guide have the
+            opportunity to discuss any...
           </p>
           <img alt='how-it-works' src='https://source.unsplash.com/600x800/?nature' />
         </ReadMoreTextBlock>
@@ -83,6 +88,12 @@ class HomePage extends React.Component {
             difficult to achieve – setting up a website and paying for marketing doesn’t come cheap.
             Plus, the few independent guides that do have a significant online presence are mostly
             city-based.
+          </p>
+          <p>
+            Via GreatGuides.com, the guides get to keep the majority of their fee, rather than
+            losing much of it to intermediary tour operators. Travellers can therefore leave home
+            secure in the knowledge that they’re supporting the local economy without risking the
+            quality…
           </p>
           <img alt='why-we-are-different' src='/images/why-we-are-different-mobile-345x294.png' />
         </ReadMoreTextBlock>
