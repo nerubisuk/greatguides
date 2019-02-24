@@ -1,4 +1,50 @@
 {
+
+  "guides": {
+    "categories": [
+      "All",
+      "Rafting",
+      "Hiking",
+      "Biking",
+      "Walking"
+    ],
+
+    "items": [
+      {
+        "name": "Andrew Hernandez",
+        "thumbnail": "https://source.unsplash.com/1600x900/?man,glass",
+        "location": "N'Djaména, Chad",
+        "rating": "4.9",
+        "reviews": "225",
+        "adventures": "4"
+      },
+      {
+        "name": "Alexis Morgan",
+        "thumbnail": "https://source.unsplash.com/1600x900/?man,forest",
+        "location": "Algarve, Portugal",
+        "rating": "4.9",
+        "reviews": "87",
+        "adventures": "8"
+      },
+      {
+        "name": "Bhupendra Sharma",
+        "thumbnail": "https://source.unsplash.com/1600x900/?man,jeep",
+        "location": "Addis Abeba, Ethiopia",
+        "rating": "4.9",
+        "reviews": "34",
+        "adventures": "3"
+      },
+      {
+        "name": "Adhraaa Al Azimi",
+        "thumbnail": "https://source.unsplash.com/1600x900/?man,desert",
+        "location": "Paris, France",
+        "rating": "4.9",
+        "reviews": "11",
+        "adventures": "2"
+      }
+    ]
+  },
+    
   "popular": {
     "categories": [
       "All",
