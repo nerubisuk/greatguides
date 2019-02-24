@@ -9,31 +9,35 @@ import Icon from 'components/Icon';
 import styles from 'styles/containers/CardList.module.scss';
 
 /* Component definition */
-const CardList = ({ children, bgColor, categories, isMore }) => (
+const CardList = ({ children, bgColor, categories, isMore, columns }) => (
   <div className={[`${styles.wrapper} ${styles[bgColor]}`]}>
-    {children.find(item => item.type === 'h3')}
+    <div className={styles.row}>
+      {children.find(item => item.type === 'h3')}
 
-    <ul className={styles.categories}>
-      {categories.map((item, index) => (
-        <React.Fragment key={index}>
-          <li>{item}</li>
-          <span>&nbsp;&bull;&nbsp;</span>
-        </React.Fragment>
-      ))}
-    </ul>
+      <ul className={styles.categories}>
+        {categories.map((item, index) => (
+          <React.Fragment key={index}>
+            <li>{item}</li>
+            <span>&nbsp;&bull;&nbsp;</span>
+          </React.Fragment>
+        ))}
+      </ul>
 
-    <hr className='short_hr' />
+      <hr className='short_hr' />
 
-    {children.filter(item => item.type === 'p')}
+      {children.filter(item => item.type === 'p')}
 
-    {children.find(item => item.length).map(item => item)}
-
-    {isMore && (
-      <div className={styles.see_more}>
-        <span>See more</span>
-        <Icon name='see-more' />
+      <div className={[`${styles.cards} ${styles[columns]}`]}>
+        {children.find(item => item.length).map(item => item)}
       </div>
-    )}
+
+      {isMore && (
+        <div className={styles.see_more}>
+          <span>See more</span>
+          <Icon name='see-more' />
+        </div>
+      )}
+    </div>
   </div>
 );
 
@@ -42,6 +46,7 @@ CardList.propTypes = {
   children: PropTypes.array.isRequired,
   categories: PropTypes.array.isRequired,
   bgColor: PropTypes.string.isRequired,
+  columns: PropTypes.string.isRequired,
   isMore: PropTypes.any,
 };
 
