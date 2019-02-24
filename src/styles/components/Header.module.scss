@@ -9,12 +9,14 @@
   grid-template-columns: 1fr auto;
   height: 67px;
   padding: 0 15px;
+  position: relative;
+  z-index: 1;
 
   .icon_search,
   .icon_burger {
     fill: $basic-grey;
-    height: 16px;
-    width: 16px;
+    height: 19px;
+    width: 19px;
   }
 
   @media (min-width: 767px) {
@@ -35,18 +37,11 @@
 
   a {
     display: block;
-
-    &:hover {
-      img {
-        transform: scale(1.05);
-      }
-    }
   }
 
-  img {
-    height: 40px;
-    transition: transform 0.14s ease-out;
-    width: 60px;
+  svg {
+    height: 38px;
+    width: 58px;
   }
 }
 
@@ -187,5 +182,20 @@
     padding-left: 20px;
     text-align: left;
     transition: color 0.14s ease-out;
+  }
+}
+
+.home_page {
+  border: 0;
+
+  .icon_search,
+  .icon_burger {
+    fill: $flat-white;
+  }
+
+  .logo {
+    svg {
+      fill: $flat-white;
+    }
   }
 }
