@@ -4,6 +4,15 @@
   padding: 40px 15px 0;
   position: relative;
 
+  .row {
+    @media (min-width: 767px) {
+      margin: 0 auto;
+      max-width: 1110px;
+      padding: 0 15px;
+      width: 90%;
+    }
+  }
+
   .categories {
     color: $light-grey;
     margin-bottom: 30px;
@@ -26,6 +35,13 @@
 
     span:last-child {
       display: none;
+    }
+  }
+
+  .cards {
+    @media (min-width: 767px) {
+      display: grid;
+      grid-column-gap: 30px;
     }
   }
 
@@ -52,6 +68,14 @@
       width: 35px;
     }
   }
+}
+
+.c3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.c4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .wrapper.white {
