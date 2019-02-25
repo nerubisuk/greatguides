@@ -5,11 +5,13 @@
  */
 import React from 'react';
 import styles from 'styles/pages/HomePage.module.scss';
+import HomeHeader from 'components/HomeHeader';
 import AdventureCard from 'components/AdventureCard';
 import GuideCard from 'components/GuideCard';
 import CardList from 'containers/CardList';
 import SubscribeToNewsletter from 'components/SubscribeToNewsletter';
 import ReadMoreTextBlock from 'components/ReadMoreTextBlock';
+import MapBox from 'components/MapBox';
 import data from 'mocks/home.json';
 
 /* Component definition */
@@ -17,8 +19,10 @@ class HomePage extends React.Component {
   render() {
     return (
       <main className={styles.wrapper}>
+        <HomeHeader guides={data.guides} />
+
         {/* Popular adventures */}
-        <CardList categories={data.popular.categories} bgColor='grey' isMore>
+        <CardList categories={data.popular.categories} bgColor='grey' isMore columns='c3'>
           <h3>Popular Adventures</h3>
           <p>
             Our guides have a lot of greate adventures in different categories like Rafting, Hiking,
@@ -31,8 +35,8 @@ class HomePage extends React.Component {
         </CardList>
 
         {/* Our Guides */}
-        <CardList categories={data.guides.categories} bgColor='white'>
-          <h3>Popular Adventures</h3>
+        <CardList categories={data.guides.categories} bgColor='white' columns='c4'>
+          <h3>Our guides</h3>
           <p>
             We have top guides from around the world. GreatGuides.com is about personal contact.
           </p>
@@ -43,9 +47,10 @@ class HomePage extends React.Component {
         </CardList>
 
         {/* Map */}
-        <div className={styles.map}>
-          <img src='/images/map.png' alt='map' />
-        </div>
+        <MapBox />
+        {/*<div className={styles.map} id="mapBoxContainer">
+           <img src='/images/map.png' alt='map' /> 
+        </div>*/}
 
         {/* Read more blocks */}
         <ReadMoreTextBlock bgColor='white'>
