@@ -186,11 +186,43 @@
 }
 
 .home_page {
-  border: 0;
+  border-color: rgba($flat-white, 0.2);
+
+  a {
+    color: $flat-white;
+  }
+
+  .nav a:hover {
+    &::after {
+      background-color: $flat-white;
+      opacity: 0.2;
+    }
+  }
+
+  .right_column {
+    border-color: rgba($flat-white, 0.2);
+  }
 
   .icon_search,
   .icon_burger {
     fill: $flat-white;
+  }
+
+  .buttons span {
+    color: $flat-white;
+  }
+
+  .buttons button {
+    &:first-child {
+      border-color: rgba($flat-white, 0.2);
+      color: $flat-white;
+    }
+
+    &:last-child {
+      background-color: rgba($flat-white, 0.2);
+      border: 0;
+      color: $flat-white;
+    }
   }
 
   .logo {
