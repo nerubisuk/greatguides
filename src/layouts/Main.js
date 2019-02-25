@@ -6,15 +6,15 @@
 import React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import Adventure from 'pages/Adventure';
+import HomePage from 'pages/HomePage';
 
 /* Component definition */
 const Main = ({ ...props }) => (
-  <>
+  <React.Fragment>
     <Header {...props} />
-    <Adventure />
+    <HomePage />
     <Footer />
-  </>
+  </React.Fragment>
 );
 
 export default Main;
