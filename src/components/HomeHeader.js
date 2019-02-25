@@ -11,30 +11,38 @@ import styles from 'styles/components/HomeHeader.module.scss';
 /* Component definition */
 const HomeHeader = ({ guides }) => (
   <div className={styles.wrapper}>
-    <h1>Great Guides make for a truly great adventure</h1>
+    <div className={styles.row}>
+      <div className={styles.grid}>
+        <div className={styles.grid_column}>
+          <h1>Great Guides make for a truly great adventure</h1>
+        </div>
 
-    <div className={styles.guides_faces}>
-      <div className={styles.faces_wrapper}>
-        {guides.items.map((item, index) => (
-          <div key={index} className={styles.face}>
-            <img src={item.avatar} alt='face' />
+        <div className={styles.grid_column}>
+          <div className={styles.guides_faces}>
+            <div className={styles.faces_wrapper}>
+              {guides.items.map((item, index) => (
+                <div key={index} className={styles.face}>
+                  <img src={item.avatar} alt='face' />
+                </div>
+              ))}
+            </div>
+            <span>All Guides</span>
           </div>
-        ))}
+
+          <hr className='short_hr' />
+
+          <p>
+            GreatGuides.com connects adventurous travellers with great guides. We just launched.
+            Join us in building our community and find your adventure!
+          </p>
+        </div>
       </div>
-      <span>All Guides</span>
+
+      <button className={styles.find_button}>
+        Find adventure
+        <Icon name='arrow-right-big' />
+      </button>
     </div>
-
-    <hr className='short_hr' />
-
-    <p>
-      GreatGuides.com connects adventurous travellers with great guides. We just launched. Join us
-      in building our community and find your adventure!
-    </p>
-
-    <button className={styles.find_button}>
-      Find adventure
-      <Icon name='arrow-right-big' />
-    </button>
   </div>
 );
 
