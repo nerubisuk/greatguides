@@ -12,7 +12,7 @@ import styles from 'styles/components/ReadMoreTextBlock.module.scss';
 const ReadMoreTextBlock = ({ children, bgColor, isReverseOrder }) => {
   return (
     <div className={[`${styles.wrapper} ${styles[bgColor]}`]}>
-      <div className={[`${styles.row} ${isReverseOrder ? styles.revers : ''}`]}>
+      <div className={[`${styles.row} ${isReverseOrder && styles.reverse}`]}>
         <div className={styles.column}>
           {children.find(item => item.type === 'h3')}
 
