@@ -1,9 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Callback from 'components/Callback';
-import auth from 'utils/auth';
-import MainLayout from 'layouts/Main';
 import PropTypes from 'prop-types';
+import auth from 'utils/auth';
+import Callback from 'components/Callback';
+import MainLayout from 'layouts/Main';
+/* Pages */
+import HomePage from 'pages/HomePage';
+import AdventureDetailsPage from 'pages/AdventureDetailsPage';
 
 const handleAuthentication = props => {
   if (/access_token|id_token|error/.test(props.location.hash)) {
@@ -18,7 +21,15 @@ const Routes = ({ childProps }) => (
       <Route
         exact
         path='/'
-        component={props => <MainLayout auth={auth} {...props} {...childProps} />}
+        component={props => <MainLayout auth={auth} page={HomePage} {...props} {...childProps} />}
+      />
+
+      <Route
+        exact
+        path='/adventure'
+        component={props => (
+          <MainLayout auth={auth} page={AdventureDetailsPage} {...props} {...childProps} />
+        )}
       />
 
       <Route
