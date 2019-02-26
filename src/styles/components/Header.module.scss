@@ -192,6 +192,12 @@
     color: $flat-white;
   }
 
+  .dropdown {
+    a {
+      color: $lighter-grey;
+    }
+  }
+
   .nav a:hover {
     &::after {
       background-color: $flat-white;
