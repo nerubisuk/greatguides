@@ -6,15 +6,20 @@
 import React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import HomePage from 'pages/HomePage';
+import PropTypes from 'prop-types';
 
 /* Component definition */
-const Main = ({ ...props }) => (
+const Main = ({ page: Page, ...props }) => (
   <React.Fragment>
     <Header {...props} />
-    <HomePage />
+    <Page {...props} />
     <Footer />
   </React.Fragment>
 );
+
+/* Prop types definition */
+Main.propTypes = {
+  page: PropTypes.func,
+};
 
 export default Main;
