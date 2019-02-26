@@ -1,5 +1,5 @@
 /* Get environment variable */
-const env = process.env;
+const env = process.env.NODE_ENV;
 
 let authConfig;
 
