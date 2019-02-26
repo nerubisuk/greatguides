@@ -5,12 +5,14 @@ export const getAdventureById = gql`
     adventure(where: { id: $id }) {
       id
       title
+      inclusionList
+      exclusionList
       categories
+      thingsToCarryList
       description
       address
       price
       reviews
-      inclusions
       media {
         imageUrl
       }
@@ -33,7 +35,6 @@ export const getAdventureById = gql`
       distance
       elevation
       difficulty
-      inclusions
       season
       minimumAge
     }
