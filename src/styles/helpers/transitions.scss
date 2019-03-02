@@ -6,11 +6,11 @@
   .fadeIn-appear.fadeIn-appear-active {
     animation-duration: 0.3s;
     animation-fill-mode: both;
-    animation-name: slideInRight;
+    animation-name: slideInTop;
     opacity: 1;
   }
 
-  @keyframes slideInRight {
+  @keyframes slideInTop {
     from {
       transform: translate3d(0, -100%, 0);
       visibility: visible;
