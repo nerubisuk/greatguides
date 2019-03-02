@@ -140,6 +140,31 @@
         "reviews": "78",
         "thumbnail": "https://source.unsplash.com/800x600/?sea"
       }
-    ]
+    ],
+
+    "reviews": {
+      "count": "125",
+      "ratings": "4.9/5", 
+      "items": [
+        {
+          "name": "Ray Cooper",
+          "avatar": "https://randomuser.me/api/portraits/men/63.jpg",
+          "description": "December 24, 2018 • London, UK • Best biking experience in the portugal mountains",
+          "content": "Very nice advenutre! Love it and would recommend it to my friends! We had an unique experience, hiking, greatguides is very good site thank you. Have a good luck! The best wishes!"
+        },
+        {
+          "name": "Nnenna Jioke",
+          "avatar": "https://randomuser.me/api/portraits/women/63.jpg",
+          "description": "December 24, 2018 • London, UK • Trek to Ade Medhanealem village",
+          "content": "Good but not enough, could be better… Dinner is awful…"
+        },
+        {
+          "name": "Roelof Bekkenenks",
+          "avatar": "https://randomuser.me/api/portraits/men/82.jpg",
+          "description": "December 24, 2018 • London, UK • Trek to Ade Medhanealem village",
+          "content": "Love it! My old wife love it too!"
+        }
+      ]
+    }
   }
 ]
