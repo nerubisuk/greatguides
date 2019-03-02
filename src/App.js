@@ -46,13 +46,13 @@ class App extends React.Component {
       <ApolloProvider client={ApolloClient}>
         {
           this.state.mql
-          ? <div className='App'>
+            ? <div className='App'>
               <Routes childProps={{ mql: this.state.mql }} />
             </div>
-          : <div />
+            : <div />
         }
       </ApolloProvider>
-    )
+    );
   }
 }
 
