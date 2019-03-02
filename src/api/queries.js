@@ -5,6 +5,7 @@ export const getAdventureById = gql`
     adventure(where: { id: $id }) {
       id
       title
+      dates
       inclusionList
       exclusionList
       categories
