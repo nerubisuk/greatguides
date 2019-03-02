@@ -26,7 +26,7 @@ const Routes = ({ childProps }) => (
 
       <Route
         exact
-        path='/adventure/:id'
+        path='/adventures/:id'
         component={props => (
           <MainLayout auth={auth} page={AdventureDetailsPage} {...props} {...childProps} />
         )}
