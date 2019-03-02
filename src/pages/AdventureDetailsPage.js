@@ -59,7 +59,7 @@ const PureAdventureDetailsPage = ({ data, mql }) => {
         <div className={styles.row}>
           <div className={styles.column}>
             {/* Departure dates */}
-            <DepartureDates dates={mockData[0].dates} />
+            <DepartureDates dates={adventure.dates} />
 
             {/* Tour description */}
             <TourDescription

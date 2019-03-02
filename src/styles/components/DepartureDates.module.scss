@@ -4,6 +4,7 @@
   border-bottom: 1px solid $very-light-grey;
   display: block;
   padding: 30px 0;
+  position: relative;
 
   header {
     display: grid;
@@ -49,13 +50,25 @@
   align-items: center;
   border: 1px solid $very-light-grey;
   border-radius: 6px;
+  cursor: pointer;
   display: inline-block;
   height: 73px;
   justify-items: center;
   margin-right: 7px;
   position: relative;
   text-align: center;
+  transition: background-color 0.2s ease-out;
   width: 81px;
+
+  &:hover {
+    background-color: $basic-orange;
+
+    p,
+    span:first-child,
+    span:last-child {
+      color: $flat-white;
+    }
+  }
 
   p {
     bottom: 0;
@@ -70,12 +83,13 @@
     right: 0;
     text-transform: uppercase;
     top: 0;
+    transition: color 0.1s ease-out;
 
     span:first-child {
       color: $basic-grey;
       font-size: 14px;
       font-weight: 600;
-      padding-left: 5px;
+      transition: color 0.1s ease-out;
     }
 
     span:last-child {
@@ -86,6 +100,62 @@
       letter-spacing: 0.2px;
       margin-top: 7px;
       text-transform: none;
+      transition: color 0.1s ease-out;
     }
   }
+}
+
+.calendar {
+  background-color: $flat-white;
+  border: 1px solid #f7f7f7;
+  border-radius: 6px;
+  bottom: -300px;
+  box-shadow: 0 16px 36px 0 rgba(0, 0, 0, 0.06);
+  height: 319px;
+  padding: 18px;
+  position: absolute;
+  text-align: center;
+  width: 328px;
+  z-index: 99;
+
+  h3 {
+    color: $basic-grey;
+    font-size: 20px;
+    line-height: 27px;
+    padding-bottom: 10px !important;
+  }
+
+  .daysOfWeek {
+    color: $lighter-grey;
+    display: grid;
+    font-size: 16px;
+    grid-template-columns: repeat(7, 1fr);
+    line-height: 20px;
+  }
+
+  .daysOfMonth {
+    color: rgba($lighter-grey, 0.4);
+    display: grid;
+    font-size: 16px;
+    grid-gap: 2px;
+    grid-template-columns: repeat(7, 1fr);
+    line-height: 40px;
+    padding: 10px 0;
+
+    li {
+      background-color: $transparent-grey;
+      border-radius: 6px;
+      display: block;
+      font-size: 16px;
+    }
+
+    .available {
+      background-color: rgba($light-orange, 0.2);
+      color: $light-orange;
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
 }
