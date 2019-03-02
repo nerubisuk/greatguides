@@ -108,4 +108,17 @@
       text-transform: uppercase;
     }
   }
+
+  .terms {
+    color: $lighter-grey;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    a {
+      color: $basic-orange;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
 }
