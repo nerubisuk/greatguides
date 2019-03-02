@@ -12,6 +12,8 @@ import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 import auth from 'utils/auth';
 
+const { REACT_APP_GRAPHQL_API_URL } = process.env;
+
 /* Gets the authentication token from the auth0 object */
 const authorization = () => {
   const token = auth.getIdToken();
@@ -20,7 +22,7 @@ const authorization = () => {
 
 /* Creates the httpLink */
 const httpLink = createHttpLink({
-  uri: 'https://api-test.services.activelyme.com/graphql',
+  uri: REACT_APP_GRAPHQL_API_URL,
 });
 
 /* Creates the authLink */
