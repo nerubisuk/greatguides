@@ -2,8 +2,8 @@ import React from 'react';
 import styles from 'styles/components/MapBox.module.scss';
 
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
-import config from 'config/mapbox';
-mapboxgl.accessToken = config.accessToken;
+
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 class MapBox extends React.Component {
   state = {
