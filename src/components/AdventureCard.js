@@ -1,8 +1,14 @@
+/**
+ * @file Holds the <AdventureCard> component
+ * @since 0.1.0
+ * @author Anton Komarenko <mi3ta@sent.as>
+ */
 import React from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
 import styles from 'styles/components/AdventureCard.module.scss';
 
+/* Component definition */
 const AdventureCard = ({ adventure }) => (
   <div className={styles.wrapper}>
     <div className={styles.thumb}>
@@ -38,6 +44,7 @@ const AdventureCard = ({ adventure }) => (
   </div>
 );
 
+/* Prop types definition */
 AdventureCard.propTypes = {
   adventure: PropTypes.object.isRequired,
 };
