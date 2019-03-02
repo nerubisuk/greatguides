@@ -1,5 +1,16 @@
+/**
+ * @file Holds auth0 setup
+ * @since 0.1.0
+ * @author Anton Komarenko <mi3ta@sent.as>
+ */
 import auth0 from 'auth0-js';
-import config from 'config/auth0';
+
+/* Gets variables from environment */
+const {
+  REACT_APP_AUTH0_DOMAIN,
+  REACT_APP_AUTH0_CLIENT_ID,
+  REACT_APP_AUTH0_CALLBACK_URL,
+} = process.env;
 
 class Auth {
   accessToken;
@@ -8,10 +19,10 @@ class Auth {
   user = {};
 
   auth0 = new auth0.WebAuth({
-    domain: config.AUTH_CONFIG.domain,
-    clientID: config.AUTH_CONFIG.clientId,
-    redirectUri: config.AUTH_CONFIG.callbackUrl,
-    audience: `https://${config.AUTH_CONFIG.domain}/userinfo`,
+    domain: REACT_APP_AUTH0_DOMAIN,
+    clientID: REACT_APP_AUTH0_CLIENT_ID,
+    redirectUri: REACT_APP_AUTH0_CALLBACK_URL,
+    audience: `https://${REACT_APP_AUTH0_DOMAIN}/userinfo`,
     responseType: 'token id_token',
     scope: 'openid email offline_access picture profile',
   });
