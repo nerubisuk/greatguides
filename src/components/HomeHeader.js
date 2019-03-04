@@ -11,6 +11,11 @@ import styles from 'styles/components/HomeHeader.module.scss';
 /* Component definition */
 const HomeHeader = ({ guides }) => (
   <div className={styles.wrapper}>
+    <div className={styles.banner}>
+      We are in early launch mode and on-boarding guides. If you are looking to book tours with one
+      of our guides, please visit us back on March 1. We will be ready for tour inquiries.
+    </div>
+
     <div className={styles.row}>
       <div className={styles.grid}>
         <div className={styles.grid_column}>
@@ -38,10 +43,20 @@ const HomeHeader = ({ guides }) => (
         </div>
       </div>
 
-      <button className={styles.find_button}>
-        Find adventure
-        <Icon name='arrow-right-big' />
-      </button>
+      <div className={styles.find_adventure}>
+        <div className={styles.input}>
+          <Icon name='location' />
+          <input type='text' placeholder='Location' />
+        </div>
+        <div className={styles.input}>
+          <Icon name='season' />
+          <input type='text' placeholder='Start date — Finish date' />
+        </div>
+        <button className={styles.find_button}>
+          Find adventure
+          <Icon name='arrow-right-big' />
+        </button>
+      </div>
     </div>
   </div>
 );
