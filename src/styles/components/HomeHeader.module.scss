@@ -1,7 +1,10 @@
 @import "styles/helpers/colors";
+@import "styles/helpers/media";
 
 .wrapper {
-  background: url("/images/home-page-bg-mobile-375.png") no-repeat center center;
+  background-image: url("/images/home-page-bg-mobile-375.png");
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   color: $flat-white;
   height: 667px;
@@ -12,8 +15,14 @@
   position: relative;
   z-index: 0;
 
-  @media (min-width: 767px) {
-    background: url("/images/home-page-bg-mobile-1600x900.png") no-repeat center center;
+  @media #{$tablet} {
+    background-image: url("/images/home-page-bg-1600x900.png");
+    height: 767px;
+    padding-top: 220px;
+  }
+
+  @media #{$desktop} {
+    background-image: url("/images/home-page-bg-1920x1080.png");
     height: 767px;
     padding-top: 220px;
   }
