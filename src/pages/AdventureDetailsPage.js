@@ -14,6 +14,7 @@ import CarryThings from 'components/CarryThings';
 import BookRequest from 'components/BookRequest';
 import TourOnTheMap from 'components/TourOnTheMap';
 import ReviewsList from 'components/ReviewsList';
+import Itinenary from 'components/Itinerary';
 import PropTypes from 'prop-types';
 import styles from 'styles/pages/AdventureDetailsPage.module.scss';
 import { getAdventureById } from 'api/queries';
@@ -102,6 +103,9 @@ const PureAdventureDetailsPage = ({ data, mql }) => {
                 </ul>
               </div>
             </div>
+
+            {/* Itinenary */}
+            <Itinenary itinerary={mockData[0].itinerary} />
 
             {/* Tour on the map */}
             <TourOnTheMap />
