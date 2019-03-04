@@ -21,6 +21,45 @@
       "https://source.unsplash.com/1600x900/?rocks"
     ],
 
+    "itinerary": [
+      {
+        "title": "Day 1: Dehradun – Sankri (2000m)",
+        "duration": "8 hours",
+        "difficulty": "Easy",
+        "description": "After arrival 7:00 AM at Bus stand/railway station, our representative leads you to lodge/guest house for refreshment. We will drive to Sankri, via Mussourrie, alongside the Yamuna and Tons rivers. The drive also passes by beautiful pine forests. On reaching Sankri, we will explore the scenic hamlet to prepare for the trek that lies ahead and overnight stay at Sankri. Meal or snacks on arrival at campsite. Basecamp exploration followed by Dinner."
+      },
+      {
+        "title": "Day 2:  Sankri (2000m) – Juda-ka-Talab (2700m) – Shepherd campsite (2900m)",
+        "duration": "3-4 trek hours",
+        "difficulty": "Hard",
+        "description": "After arrival 7:00 AM at Bus stand/railway station, our representative leads you to lodge/guest house for refreshment. We will drive to Sankri, via Mussourrie, alongside the Yamuna and Tons rivers. The drive also passes by beautiful pine forests. On reaching Sankri, we will explore the scenic hamlet to prepare for the trek that lies ahead and overnight stay at Sankri. Meal or snacks on arrival at campsite. Basecamp exploration followed by Dinner."
+      },
+      {
+        "title": "Day 3: Shepherd camp (2900m) – Base of Kedar Kantha (3400m)",
+        "duration": "4-5 trek hours",
+        "difficulty": "Medium",
+        "description": "After arrival 7:00 AM at Bus stand/railway station, our representative leads you to lodge/guest house for refreshment. We will drive to Sankri, via Mussourrie, alongside the Yamuna and Tons rivers. The drive also passes by beautiful pine forests. On reaching Sankri, we will explore the scenic hamlet to prepare for the trek that lies ahead and overnight stay at Sankri. Meal or snacks on arrival at campsite. Basecamp exploration followed by Dinner."
+      },
+      {
+        "title": "Day 4: Base camp (3400m) – KedarKantha (3800m) – Juda-ka-Talab (2700m)",
+        "duration": "5-6 trek hours",
+        "difficulty": "Hard",
+        "description": "After arrival 7:00 AM at Bus stand/railway station, our representative leads you to lodge/guest house for refreshment. We will drive to Sankri, via Mussourrie, alongside the Yamuna and Tons rivers. The drive also passes by beautiful pine forests. On reaching Sankri, we will explore the scenic hamlet to prepare for the trek that lies ahead and overnight stay at Sankri. Meal or snacks on arrival at campsite. Basecamp exploration followed by Dinner."
+      },
+      {
+        "title": "Day 5: Hargano thach to Sankri by Trek (7kmt) (1920mt)",
+        "duration": "5-6 trek hours",
+        "difficulty": "Hard",
+        "description": "After arrival 7:00 AM at Bus stand/railway station, our representative leads you to lodge/guest house for refreshment. We will drive to Sankri, via Mussourrie, alongside the Yamuna and Tons rivers. The drive also passes by beautiful pine forests. On reaching Sankri, we will explore the scenic hamlet to prepare for the trek that lies ahead and overnight stay at Sankri. Meal or snacks on arrival at campsite. Basecamp exploration followed by Dinner."
+      },
+      {
+        "title": "Day 6: After breakfast Sankri to Dehradun drive (210km)",
+        "duration": "7-8 hours",
+        "difficulty": "Easy",
+        "description": "After arrival 7:00 AM at Bus stand/railway station, our representative leads you to lodge/guest house for refreshment. We will drive to Sankri, via Mussourrie, alongside the Yamuna and Tons rivers. The drive also passes by beautiful pine forests. On reaching Sankri, we will explore the scenic hamlet to prepare for the trek that lies ahead and overnight stay at Sankri. Meal or snacks on arrival at campsite. Basecamp exploration followed by Dinner."
+      }
+    ],
+
     "dates": [
       {
         "year": "2019",
