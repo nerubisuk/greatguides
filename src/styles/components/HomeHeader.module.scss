@@ -37,6 +37,18 @@
     }
   }
 
+  .banner {
+    background-color: #93886e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+    width: 100%;
+  }
+
   .row {
     @media (min-width: 767px) {
       margin: 0 auto;
@@ -115,6 +127,40 @@
       height: 12px;
       margin-left: 10px;
       width: 18px;
+    }
+  }
+
+  .find_adventure {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 20%;
+  }
+
+  .input {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    display: grid;
+    font-size: 15px;
+    grid-template-columns: auto 1fr auto;
+    padding: 13px 17px;
+
+    ::placeholder {
+      color: $flat-white;
+    }
+
+    input {
+      background: transparent;
+      border: 0;
+      color: $flat-white;
+      margin-left: 10px;
+    }
+
+    svg {
+      fill: $flat-white;
+      height: 16px;
+      width: 16px;
     }
   }
 }
