@@ -4,7 +4,6 @@
  * @author Anton Komarenko <mi3ta@sent.as>
  */
 import React from 'react';
-import { graphql } from 'react-apollo';
 import Icon from 'components/Icon';
 import PhotoSlider from 'components/PhotoSlider';
 import AdventureCard from 'components/AdventureCard';
@@ -17,14 +16,25 @@ import ReviewsList from 'components/ReviewsList';
 import Itinenary from 'components/Itinerary';
 import PropTypes from 'prop-types';
 import styles from 'styles/pages/AdventureDetailsPage.module.scss';
-import { getAdventureById } from 'api/queries';
+import Store from 'store';
+import { fetchAdventureById } from 'store/actions';
 import mockData from 'mocks/adventures';
 
 /* Component definition */
-const PureAdventureDetailsPage = ({ data, mql }) => {
-  const { loading, adventure } = data;
+const AdventureDetailsPage = ({ match }) => {
+  /* Connect to the store */
+  const { state, dispatch } = React.useContext(Store);
+  const { adventure, mql } = state;
 
-  if (loading) return 'Loading...';
+  /**
+   * React useEffect Hook
+   * @see {@link https://reactjs.org/docs/hooks-effect.html|Effect Hook}
+   */
+  React.useEffect(() => {
+    !adventure && fetchAdventureById(match.params.id, dispatch);
+  }, [state]);
+
+  if (!adventure) return 'Loading...';
 
   return (
     <main className={styles.wrapper}>
@@ -138,14 +148,8 @@ const PureAdventureDetailsPage = ({ data, mql }) => {
 };
 
 /* Prop types definition */
-PureAdventureDetailsPage.propTypes = {
-  data: PropTypes.object,
-  mql: PropTypes.string.isRequired,
+AdventureDetailsPage.propTypes = {
   match: PropTypes.object,
 };
 
-export default graphql(getAdventureById, {
-  options: ({ match }) => ({
-    variables: { id: match.params.id },
-  }),
-})(PureAdventureDetailsPage);
+export default AdventureDetailsPage;
