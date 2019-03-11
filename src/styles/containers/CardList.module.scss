@@ -1,14 +1,14 @@
 @import "styles/helpers/colors";
+@import "styles/helpers/media";
 
 .wrapper {
   padding: 40px 15px 0;
   position: relative;
 
   .row {
-    @media (min-width: 767px) {
+    @media #{$desktop} {
       margin: 0 auto;
       max-width: 1110px;
-      padding: 0 15px;
       width: 90%;
     }
   }
@@ -39,9 +39,10 @@
   }
 
   .cards {
-    @media (min-width: 767px) {
+    @media #{$desktop} {
       display: grid;
       grid-column-gap: 30px;
+      grid-row-gap: 30px;
     }
   }
 
