@@ -1,6 +1,15 @@
 import API from 'api';
 import { getAdventures, getGuides, getAdventureById } from 'api/queries';
 
+export const toggleMobileMenu = (isMobileMenu, dispatch) => {
+  document.body.classList.toggle('overlayed');
+
+  return dispatch({
+    type: 'TOGGLE_MOBILE_MENU',
+    payload: !isMobileMenu,
+  });
+};
+
 export const fetchGuides = async (first, dispatch) => {
   try {
     const { data } = await API.query({
