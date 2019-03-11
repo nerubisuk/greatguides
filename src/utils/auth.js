@@ -78,11 +78,12 @@ class Auth {
 
     // Set some user data
     const {
-      idTokenPayload: { email, nickname, picture },
+      idTokenPayload: { email, nickname, picture, name },
     } = authResult;
     this.user.email = email;
     this.user.nickname = nickname;
     this.user.picture = picture;
+    this.user.name = name;
 
     // Navigate to the home route
     history.push('/');
