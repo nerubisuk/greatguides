@@ -15,21 +15,19 @@ const handleAuthentication = props => {
 };
 
 /* Component definition */
-const Routes = ({ childProps }) => (
+const Routes = () => (
   <Router>
     <Switch>
       <Route
         exact
         path='/'
-        component={props => <MainLayout auth={auth} page={HomePage} {...props} {...childProps} />}
+        component={props => <MainLayout auth={auth} page={HomePage} {...props} />}
       />
 
       <Route
         exact
         path='/adventures/:id'
-        component={props => (
-          <MainLayout auth={auth} page={AdventureDetailsPage} {...props} {...childProps} />
-        )}
+        component={props => <MainLayout auth={auth} page={AdventureDetailsPage} {...props} />}
       />
 
       <Route
