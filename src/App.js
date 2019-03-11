@@ -6,46 +6,21 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Routes from 'components/Routes';
-import matchMedia from 'utils/matchMedia';
 import auth from 'utils/auth';
 import PropTypes from 'prop-types';
 
-/* Component definition */
-class App extends React.Component {
-  state = {
-    mql: null,
-  };
-
-  updateView = () => {
-    this.setState({ mql: matchMedia() });
-  };
-
-  componentDidMount() {
-    this.updateView();
-    window.addEventListener('resize', this.updateView);
-
-    this.renewAuthSession();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateView);
-  }
-
-  renewAuthSession() {
-    const { history } = this.props;
-
+const App = ({ history }) => {
+  React.useEffect(() => {
     if (localStorage.getItem('isLoggedIn') === 'true') {
       auth.renewSession(history);
     }
-  }
+  }, []);
 
-  render() {
-    return (
-      <div className='App'>
-        <Routes childProps={{ mql: this.state.mql }} />
-      </div>
-    );
-  }
+  return (
+    <div className='App'>
+      <Routes />
+    </div>
+  )
 }
 
 /* PropTypes definition */
