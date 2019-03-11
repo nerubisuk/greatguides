@@ -6,43 +6,50 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from 'styles/components/AdventureCard.module.scss';
 
 /* Component definition */
-const AdventureCard = ({ adventure }) => (
-  <div className={styles.wrapper}>
-    <div className={styles.thumb}>
-      <div className={styles.price}>${adventure.price}</div>
-      <div className={styles.like}>
-        <Icon name='heart' />
-      </div>
+const AdventureCard = ({ adventure }) => {
+  const imageUrl = adventure.media[0]
+    ? adventure.media[0].imageUrl
+    : 'https://source.unsplash.com/1600x900/?nature';
 
-      <div className={styles.guide}>
-        <div className={styles.face}>
-          <img src={adventure.avatar} alt='avatar' />
+  return (
+    <Link to={`/adventures/${adventure.id}`} className={styles.wrapper}>
+      <div className={styles.thumb}>
+        <div className={styles.price}>${adventure.price}</div>
+        <div className={styles.like}>
+          <Icon name='heart' />
         </div>
-        <p>{adventure.guide}</p>
-        <div className={styles.info}>
-          <Icon name='star' />
-          <span>{adventure.ratings.substring(0, 3)}</span>
-          <span>&bull;</span>
-          <span>{adventure.reviews} reviews</span>
+
+        <div className={styles.guide}>
+          <div className={styles.face}>
+            <img src={adventure.guide.profilePictureUrl} alt='avatar' />
+          </div>
+          <p>{adventure.guide.fullName}</p>
+          <div className={styles.info}>
+            <Icon name='star' />
+            <span>{adventure.reviews}</span>
+            <span>&bull;</span>
+            <span>{/*adventure.reviews*/} reviews</span>
+          </div>
+        </div>
+
+        <img src={imageUrl} alt='thumbnail' />
+      </div>
+
+      <div className={styles.description}>
+        <div className={styles.type}>{adventure.categories}</div>
+        <p>{adventure.title}</p>
+        <div className={styles.location}>
+          <Icon name='location' />
+          {adventure.address}
         </div>
       </div>
-
-      <img src={adventure.thumbnail} alt='thumbnail' />
-    </div>
-
-    <div className={styles.description}>
-      <div className={styles.type}>{adventure.type}</div>
-      <p>{adventure.title}</p>
-      <div className={styles.location}>
-        <Icon name='location' />
-        {adventure.location}
-      </div>
-    </div>
-  </div>
-);
+    </Link>
+  );
+};
 
 /* Prop types definition */
 AdventureCard.propTypes = {
