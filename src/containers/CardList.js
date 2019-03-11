@@ -9,37 +9,41 @@ import Icon from 'components/Icon';
 import styles from 'styles/containers/CardList.module.scss';
 
 /* Component definition */
-const CardList = ({ children, bgColor, categories, isMore, columns }) => (
-  <div className={[`${styles.wrapper} ${styles[bgColor]}`]}>
-    <div className={styles.row}>
-      {children.find(item => item.type === 'h3')}
+const CardList = ({ children, bgColor, categories, isMore, columns }) => {
+  const cardsArray = children.find(item => item.length);
 
-      <ul className={styles.categories}>
-        {categories.map((item, index) => (
-          <React.Fragment key={index}>
-            <li>{item}</li>
-            <span>&nbsp;&bull;&nbsp;</span>
-          </React.Fragment>
-        ))}
-      </ul>
+  return (
+    <div className={[`${styles.wrapper} ${styles[bgColor]}`]}>
+      <div className={styles.row}>
+        {children.find(item => item.type === 'h3')}
 
-      <hr className='short_hr' />
+        <ul className={styles.categories}>
+          {categories.map((item, index) => (
+            <React.Fragment key={index}>
+              <li>{item}</li>
+              <span>&nbsp;&bull;&nbsp;</span>
+            </React.Fragment>
+          ))}
+        </ul>
 
-      {children.filter(item => item.type === 'p')}
+        <hr className='short_hr' />
 
-      <div className={[`${styles.cards} ${styles[columns]}`]}>
-        {children.find(item => item.length).map(item => item)}
-      </div>
+        {children.filter(item => item.type === 'p')}
 
-      {isMore && (
-        <div className={styles.see_more}>
-          <span>See more</span>
-          <Icon name='see-more' />
+        <div className={[`${styles.cards} ${styles[columns]}`]}>
+          {cardsArray && cardsArray.map(item => item)}
         </div>
-      )}
+
+        {isMore && (
+          <div className={styles.see_more}>
+            <span>See more</span>
+            <Icon name='see-more' />
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 /* Prop types definition */
 CardList.propTypes = {
