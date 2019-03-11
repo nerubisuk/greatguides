@@ -8,12 +8,48 @@ const initialState = {
   mql: matchMedia(),
   guides: [],
   adventures: [],
+  isMobileMenu: false,
+  mainNav: [
+    {
+      title: 'Guides',
+      link: '/',
+    },
+    {
+      title: 'Adventures',
+      link: '/',
+    },
+    {
+      title: 'Become a guide',
+      link: '/',
+    },
+    {
+      title: 'Stories',
+      link: '/',
+    },
+  ],
+  socialLinks: [
+    {
+      link: 'http://facebook.com',
+      icon: 'facebook',
+    },
+    {
+      link: 'http://twitter.com',
+      icon: 'twitter',
+    },
+    {
+      link: 'http://instagram.com',
+      icon: 'instagram',
+    },
+  ],
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
   case 'SET_MQL':
     return { ...state, mql: action.payload };
+
+  case 'TOGGLE_MOBILE_MENU':
+    return { ...state, isMobileMenu: action.payload };
 
   case 'FETCH_GUIDES':
     return { ...state, guides: action.payload };
