@@ -155,6 +155,8 @@ const DepartureDates = ({ dates }) => {
       );
   }
 
+  if (!dates.length) return 'Loading...';
+
   /* Basic component's markup */
   return (
     <div className={styles.wrapper}>
