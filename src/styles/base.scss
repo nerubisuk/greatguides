@@ -10,6 +10,15 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* stylelint-disable */
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+body.overlayed {
+  overflow: hidden;
 }
 
 h1,
