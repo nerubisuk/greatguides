@@ -6,7 +6,8 @@ const Store = React.createContext();
 
 const initialState = {
   mql: matchMedia(),
-  adventure: null,
+  guides: [],
+  adventures: [],
 };
 
 const reducer = (state, action) => {
@@ -14,8 +15,14 @@ const reducer = (state, action) => {
   case 'SET_MQL':
     return { ...state, mql: action.payload };
 
+  case 'FETCH_GUIDES':
+    return { ...state, guides: action.payload };
+
+  case 'FETCH_ADVENTURES':
+    return { ...state, adventures: action.payload };
+
   case 'FETCH_ADVENTURE_BY_ID':
-    return { ...state, adventure: action.payload };
+    return { ...state, adventures: action.payload };
 
   default:
     return state;
