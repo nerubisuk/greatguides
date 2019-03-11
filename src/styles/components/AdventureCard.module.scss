@@ -116,7 +116,7 @@
   background-color: $flat-white;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  min-height: 125px;
+  // min-height: 125px;
   padding: 15px;
 
   p {
@@ -145,7 +145,7 @@
   grid-template-columns: auto 1fr;
 
   svg {
-    fill: $flat-white;
+    fill: $light-grey;
     height: 12px;
     width: 12px;
   }
