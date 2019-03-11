@@ -8,27 +8,9 @@ import { Link } from 'react-router-dom';
 import Transition from 'react-addons-css-transition-group';
 import Icon from 'components/Icon';
 import PropTypes from 'prop-types';
+import Store from 'store';
+import { toggleMobileMenu } from 'store/actions';
 import styles from 'styles/components/Header.module.scss';
-
-/* Constants definition */
-const navItems = [
-  {
-    title: 'Guides',
-    link: '/',
-  },
-  {
-    title: 'Adventures',
-    link: '/',
-  },
-  {
-    title: 'Become a guide',
-    link: '/',
-  },
-  {
-    title: 'Stories',
-    link: '/',
-  },
-];
 
 const dropItems = [
   {
@@ -53,119 +35,117 @@ const dropItems = [
   },
 ];
 
-/* Component definition */
-class Header extends React.Component {
-  state = {
-    isDropDown: false,
-  };
+const Header = ({ mql, auth, location, history }) => {
+  const { state, dispatch } = React.useContext(Store);
 
-  componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
-  }
+  const dropDownRef = React.useRef(null);
 
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
-  }
+  const [isDropDown, toggleDropDown] = React.useState(false);
 
-  handleLogin = () => {
-    this.props.auth.login();
-  };
+  const isHomePage = location.pathname === '/';
 
-  handleSignup = () => {
-    this.props.auth.signup();
-  };
+  React.useEffect(() => {
+    /* componentDidMount */
+    document.addEventListener('mousedown', handleClickOutside, false);
 
-  handleLogout = () => {
-    this.props.auth.logout(this.props.history);
-  };
+    /* componentWillUnmount */
+    return () => document.removeEventListener('mousedown', handleClickOutside, false);
+  }, []);
 
-  handleToggleDropDown = () => {
-    this.setState({
-      isDropDown: !this.state.isDropDown,
-    });
-  };
-
-  setDropDownRef = node => {
-    this.dropDownRef = node;
-  };
-
-  handleClickOutside = event => {
-    if (this.dropDownRef && !this.dropDownRef.contains(event.target)) {
-      this.handleToggleDropDown();
+  const handleClickOutside = e => {
+    if (dropDownRef.current && !dropDownRef.current.contains(e.target)) {
+      toggleDropDown(false);
     }
   };
 
-  render() {
-    const { mql, auth, location } = this.props,
-      { isDropDown } = this.state;
+  const handleToggleDropDown = () => {
+    toggleDropDown(true);
+  };
 
-    const isHomePage = location.pathname === '/';
+  const handleLogin = () => {
+    auth.login();
+  };
 
-    return (
-      <header className={[`${styles.wrapper} ${isHomePage && styles.home_page}`]}>
-        <div className={styles.logo}>
-          <Link to='/'>
-            <Icon name='logo' className='icon_logo' />
-          </Link>
-        </div>
+  const handleSignup = () => {
+    auth.signup();
+  };
 
-        {mql !== 'mobile' && (
-          <nav className={styles.nav}>
-            {navItems.map((item, index) => (
-              <Link key={index} to={item.link}>
-                {item.title}
-              </Link>
-            ))}
-          </nav>
+  const handleLogout = () => {
+    auth.logout(history);
+  };
+
+  const handleToggleMobileMenu = () => {
+    toggleMobileMenu(state.isMobileMenu, dispatch);
+  };
+
+  return (
+    <header className={[`${styles.wrapper} ${isHomePage && styles.home_page}`]}>
+      <div className={styles.logo}>
+        <Link to='/'>
+          <Icon name='logo' className='icon_logo' />
+        </Link>
+      </div>
+
+      {mql !== 'mobile' && (
+        <nav className={styles.nav}>
+          {state.mainNav.map((item, index) => (
+            <Link key={index} to={item.link}>
+              {item.title}
+            </Link>
+          ))}
+        </nav>
+      )}
+
+      <div className={styles.right_column}>
+        <Icon name='search' className={styles.icon_search} />
+        {mql !== 'desktop' && (
+          <button onClick={handleToggleMobileMenu}>
+            <Icon name='burger' className={styles.icon_burger} />
+          </button>
         )}
+      </div>
 
-        <div className={styles.right_column}>
-          <Icon name='search' className={styles.icon_search} />
-          {mql !== 'desktop' && <Icon name='burger' className={styles.icon_burger} />}
-        </div>
+      {mql !== 'mobile' && (
+        <React.Fragment>
+          {auth.isAuthenticated() ? (
+            <div className={styles.profile} onClick={handleToggleDropDown}>
+              <div>
+                <img src={auth.getUserData().picture} alt='avatar' />
+              </div>
 
-        {mql !== 'mobile' && (
-          <>
-            {auth.isAuthenticated() ? (
-              <div className={styles.profile} onClick={this.handleToggleDropDown}>
-                <div>
-                  <img src={auth.getUserData().picture} alt='avatar' />
-                </div>
-
-                {isDropDown && (
-                  <Transition
-                    transitionName='fadeIn'
-                    transitionAppear={true}
-                    transitionAppearTimeout={300}
-                    transitionEnter={false}
-                    transitionLeave={false}
-                  >
-                    <ul className={styles.dropdown} ref={this.setDropDownRef}>
-                      {dropItems.map((item, index) => (
-                        <li key={index}>
-                          <Link to={item.link}>{item.title}</Link>
-                        </li>
-                      ))}
-                      <li>
-                        <button onClick={this.handleLogout}>Signout</button>
+              {isDropDown && (
+                <Transition
+                  transitionName='fadeIn'
+                  transitionAppear={true}
+                  transitionAppearTimeout={300}
+                  transitionEnter={false}
+                  transitionLeave={false}
+                >
+                  <ul className={styles.dropdown} ref={dropDownRef}>
+                    {dropItems.map((item, index) => (
+                      <li key={index}>
+                        <Link to={item.link}>{item.title}</Link>
                       </li>
-                    </ul>
-                  </Transition>
-                )}
-              </div>
-            ) : (
-              <div className={styles.buttons}>
-                <button onClick={this.handleLogin}>Log in</button>
-                <span>or</span>
-                <button onClick={this.handleSignup}>Sign up</button>
-              </div>
-            )}
-          </>
-        )}
-      </header>
-    );
-  }
-}
+                    ))}
+                    <li>
+                      <button onClick={handleLogout}>Signout</button>
+                    </li>
+                  </ul>
+                </Transition>
+              )}
+            </div>
+          ) : (
+            <div className={styles.buttons}>
+              <button onClick={handleLogin}>Log in</button>
+              <span>or</span>
+              <button onClick={handleSignup}>Sign up</button>
+            </div>
+          )}
+        </React.Fragment>
+      )}
+    </header>
+  );
+};
 
 /* PropTypes definition */
 Header.propTypes = {
