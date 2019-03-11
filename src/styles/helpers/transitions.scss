@@ -20,4 +20,32 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
+  .slideIn-appear {
+    opacity: 0.01;
+  }
+
+  .slideIn-appear.slideIn-appear-active {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: slide-in-right;
+    opacity: 1;
+  }
+
+  /**
+   * ----------------------------------------
+   * animation slide-in-right
+   * ----------------------------------------
+   */
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(1000px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
