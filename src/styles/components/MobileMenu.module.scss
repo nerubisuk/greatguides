@@ -1,0 +1,167 @@
+@import "styles/helpers/colors";
+
+.wrapper {
+  background-color: rgba($flat-black, 0.7);
+  display: grid;
+  grid-template-areas: ". content";
+  grid-template-columns: 40% 60%;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header {
+  border-bottom: 1px solid $very-light-grey;
+  height: 70px;
+  text-align: center;
+}
+
+.profile {
+  align-items: center;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto 1fr;
+  padding: 15px 0 0 30px;
+  text-align: left;
+}
+
+.profile_name {
+  color: $basic-grey;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile_face {
+  border-radius: 50%;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+
+  img {
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.buttons {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 auto;
+
+  button {
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 10px;
+    transition: color 0.12s ease-out;
+
+    &:first-child {
+      border: 1px solid $very-light-grey;
+      color: $light-grey;
+    }
+
+    &:last-child {
+      background-color: $transparent-grey;
+      border: 1px solid $transparent-grey;
+      color: $basic-grey;
+    }
+
+    &:hover {
+      color: $basic-orange;
+    }
+  }
+
+  span {
+    color: $light-grey;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+}
+
+.nav {
+  padding: 15px 0 30px;
+
+  a {
+    color: $basic-grey;
+    display: block;
+    font-size: 16px;
+    line-height: 3;
+    padding-left: 30px;
+  }
+}
+
+.content {
+  grid-area: content;
+  height: inherit;
+}
+
+.content_bg {
+  background-color: $flat-white;
+  display: grid;
+  grid-template-rows: 70px auto 131px;
+  height: inherit;
+}
+
+.footer {
+  height: 131px;
+  padding: 20px 15px;
+}
+
+.social {
+  align-items: center;
+  display: grid;
+  grid-area: social;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  justify-items: center;
+  margin-bottom: 15px;
+
+  a {
+    align-items: center;
+    background-color: $transparent-grey;
+    border-radius: 50%;
+    display: grid;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    width: 40px;
+  }
+}
+
+.copyright {
+  color: $light-grey;
+  font-size: 12px;
+  grid-area: copy;
+  line-height: 1.5;
+  text-align: center;
+
+  a {
+    color: $light-grey;
+    text-decoration: underline;
+  }
+
+  @media (min-width: 767px) {
+    align-items: center;
+    display: grid;
+  }
+}
+
+.facebook {
+  fill: $facebook;
+  height: 16px;
+  width: 15px;
+}
+
+.twitter {
+  fill: $twitter;
+  height: 16px;
+  width: 16px;
+}
+
+.instagram {
+  height: 18px;
+  width: 18px;
+}
