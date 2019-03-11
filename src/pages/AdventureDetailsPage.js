@@ -6,7 +6,7 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import PhotoSlider from 'components/PhotoSlider';
-import AdventureCard from 'components/AdventureCard';
+// import AdventureCard from 'components/AdventureCard';
 import DepartureDates from 'components/DepartureDates';
 import TourDescription from 'components/TourDescription';
 import CarryThings from 'components/CarryThings';
@@ -24,14 +24,17 @@ import mockData from 'mocks/adventures';
 const AdventureDetailsPage = ({ match }) => {
   /* Connect to the store */
   const { state, dispatch } = React.useContext(Store);
-  const { adventure, mql } = state;
+  const { adventures, mql } = state;
+
+  const adventure = adventures.find(item => item.id === match.params.id);
 
   /**
    * React useEffect Hook
    * @see {@link https://reactjs.org/docs/hooks-effect.html|Effect Hook}
    */
   React.useEffect(() => {
-    !adventure && fetchAdventureById(match.params.id, dispatch);
+    window.scrollTo(0, 0);
+    !adventure && fetchAdventureById(state, match.params.id, dispatch);
   }, [state]);
 
   if (!adventure) return 'Loading...';
@@ -136,9 +139,9 @@ const AdventureDetailsPage = ({ match }) => {
           <h2>Similar Adventures</h2>
           {
             <section>
-              {mockData[0].similar.map((item, index) => (
+              {/* mockData[0].similar.map((item, index) => (
                 <AdventureCard key={index} adventure={item} />
-              ))}
+              )) */}
             </section>
           }
         </div>
