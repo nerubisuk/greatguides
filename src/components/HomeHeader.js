@@ -11,10 +11,10 @@ import styles from 'styles/components/HomeHeader.module.scss';
 /* Component definition */
 const HomeHeader = ({ guides }) => (
   <div className={styles.wrapper}>
-    <div className={styles.banner}>
+    {/* <div className={styles.banner}>
       We are in early launch mode and on-boarding guides. If you are looking to book tours with one
       of our guides, please visit us back on March 1. We will be ready for tour inquiries.
-    </div>
+    </div> */}
 
     <div className={styles.row}>
       <div className={styles.grid}>
