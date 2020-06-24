@@ -38,6 +38,10 @@ class PhotoSlider extends React.Component {
     const { current } = this.state,
       { photos } = this.props;
 
+    if (!photos[current]) {
+      photos[current] = { imageUrl: 'https://source.unsplash.com/1600x900/?nature' };
+    }
+
     return (
       <div className={styles.wrapper}>
         <div className={styles.controls}>
