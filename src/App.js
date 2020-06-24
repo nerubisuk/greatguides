@@ -20,8 +20,8 @@ const App = ({ history }) => {
     <div className='App'>
       <Routes />
     </div>
-  )
-}
+  );
+};
 
 /* PropTypes definition */
 App.propTypes = {
